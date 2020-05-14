@@ -1,0 +1,25 @@
+{% set title = "Main" %}
+
+{% set description = "Пластическая операция это личное дело каждого." %}
+
+{% set ogImage236 = "img/main/top/768x436.jpg" %}
+{% set ogImage = "img/main/top/1280x720.jpg" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article>
+
+		<h1 class="visuallyhidden">
+			{{ title }}
+		</h1>
+
+{% include "main/top-img.html" %}
+{% include "main/about.html" %}
+
+	</article>
+
+{% include "main/review.html" %}
+
+{% endblock %}

@@ -1,0 +1,80 @@
+	<div class="modal">
+
+		<div class="modal__box">
+
+			<div class="modal__item modal__item--photo">
+
+				<div id="modal-photo">
+
+				</div>
+
+			</div>
+
+			<div class="modal__item modal__item--info">
+
+				<h3 class="h1">
+					Спасибо за вашу заявку!
+				</h3>
+
+				<p>
+					Администратор свяжется с вами в ближайшее время.
+				</p>
+
+				<button class="modal-form__btn btn modal__close" type="button">
+					Закрыть окно
+				</button>
+
+			</div>
+
+
+			<div class="modal__item modal__item--form">
+
+				<form class="modal-form form" action="/ajax/order.php" autocomplete="off" novalidate="novalidate" data-ok-modal="info">
+
+					<div class="modal-form__input">
+
+						<input class="input" placeholder="Имя">
+
+					</div>
+
+					<div class="modal-form__input">
+
+						<input class="input inputmask inputmask--phone" placeholder="Телефон" type="tel" required="required">
+
+					</div>
+
+					<div class="modal-form__input">
+
+						<textarea class="input" placeholder="Комментарий"></textarea>
+
+					</div>
+
+					<div class="modal-form__checkbox">
+
+						<label class="checkbox">
+
+							<input type="checkbox" class="checkbox__input" required="required">
+
+							<span class="checkbox__label">
+								Я согласен/а на <a href="/" target="_blank">обработку персональных данных</a> и ознакомлен/а с&nbsp;<a href="/" target="_blank">Пользовательским соглашением</a>
+							</span>
+
+						</label>
+
+					</div>
+
+					<button class="modal-form__btn btn form__submit">
+						Записаться на прием
+					</button>
+
+				</form>
+
+			</div>
+
+			<button type="button" class="modal__close modal__close-btn button">
+				Закрыть окно
+			</button>
+
+		</div>
+
+	</div>

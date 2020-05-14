@@ -1,0 +1,35 @@
+@import url(fonts.css);
+@import url(variables.css);
+@import url(media.css);
+@import url(default.css);
+@import url(form.css);
+
+@import url(modal.css);
+@import url(swiper.css);
+
+@import url(header.css);
+@import url(menu.css);
+@import url(footer.css);
+@import url(member.css);
+@import url(social.css);
+
+@import url(top-img.css);
+@import url(surgeries.css);
+
+@import url(review.css);
+@import url(readme.css);
+
+@import url(certificates.css);
+@import url(education-qualification.css);
+
+@import url(contact.css);
+
+@import url(surgery.css);
+@import url(accordion.css);
+@import url(faq.css);
+@import url(adult.css);
+
+@import url(before-after.css);
+
+@import url(press.css);
+@import url(scroll-observer.css);

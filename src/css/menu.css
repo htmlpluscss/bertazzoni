@@ -1,0 +1,172 @@
+.menu {
+
+	margin-top: -9px;
+	white-space: nowrap;
+
+	@media (max-width: 1500px) {
+
+		margin-top: 15px;
+
+	}
+
+	@media ($mdWidth) {
+
+		display: none;
+		margin: 58px 0;
+
+		.menu-show & {
+
+			display: block;
+
+		}
+
+	}
+
+	&__list {
+
+		display: flex;
+		justify-content: center;
+
+		@media ($mdWidth) {
+
+			display: block;
+			text-align: center;
+
+		}
+
+	}
+
+	&__item {
+
+		margin: 0 40px;
+
+		@media ($mdWidth) {
+
+			margin: 0;
+			min-height: 40px;
+			min-height: 60px;
+
+		}
+
+	}
+
+	&__link {
+
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 1;
+		letter-spacing: 1px;
+		color: var(--text);
+
+		@media ($mdWidth) {
+
+			font-size: 14px;
+
+		}
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: color(var(--text) a(100%));
+
+			}
+
+		}
+
+	}
+
+	&__sub {
+
+		width: 0;
+		height: 0;
+		overflow: hidden;
+		position: relative;
+
+		&-item {
+
+			margin: 20px 0 16px;
+
+			@media ($mdWidth) {
+
+				margin: 0 0 12px;
+
+			}
+
+		}
+
+		&-link {
+
+			font-size: 16px;
+			line-height: 1;
+			letter-spacing: 1px;
+			color: var(--text);
+
+			@media ($mdWidth) {
+
+				font-size: 14px;
+
+			}
+
+		}
+
+	}
+
+	@media ($desktop) {
+
+		&__item:hover &__sub {
+
+			overflow: visible;
+			height: auto;
+
+		}
+
+		&__arrow {
+
+			display: none;
+
+		}
+
+	}
+
+	@media ($mdWidth) {
+
+		&__arrow {
+
+			margin: auto;
+			width: 14px;
+			height: 12px;
+			display: block;
+			transition: 0;
+
+			svg {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+
+			}
+
+			&--open {
+
+				transform: rotate(180deg);
+
+			}
+
+		}
+
+		&__arrow--open + &__sub {
+
+			width: auto;
+			height: auto;
+			overflow: visible;
+			margin-bottom: 34px;
+
+		}
+
+	}
+
+}

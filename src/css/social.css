@@ -1,0 +1,41 @@
+.social {
+
+	display: flex;
+
+	&__item {
+
+		display: flex;
+		align-items: center;
+		margin-left: 32px;
+
+		&:first-child {
+
+			margin-left: 0;
+
+		}
+
+	}
+
+	&__link {
+
+		display: block;
+
+		svg {
+
+			fill: var(--text);
+
+		}
+
+		@media ($desktop) {
+
+			&:hover svg {
+
+				fill: var(--black);
+
+			}
+
+		}
+
+	}
+
+}

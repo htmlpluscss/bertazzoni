@@ -1,0 +1,49 @@
+{% set title = site %}
+
+{% set description = "" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div style="padding: 80px 40px">
+
+		<h1 class="h1">Pages</h1>
+
+		<ul class="h2">
+			<li><a href="/main">main</a></li>
+		</ul>
+
+		<hr style="margin: 20px">
+
+		<div style="display: flex; flex-wrap: wrap;">
+
+			<button class="btn" style="margin: 10px;" type="button" onclick="BERTAZZONI.modalShow('form')">
+				.btn
+			</button>
+
+			<button class="btn btn--outline" style="margin: 10px;" onclick="BERTAZZONI.modalShow('info')">
+				.btn .btn--outline
+			</button>
+
+			<input class="input" placeholder="placeholder" style="margin: 10px;">
+
+		</div>
+
+		<h1 class="h1">PageSpeed</h1>
+
+		<ul class="h2">
+			<li><a target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fbertazzoni.wndrbase.com%2Fmain%2F&tab=desktop">main <b>100|100</b></a></li>
+		</ul>
+
+		<hr style="margin: 20px">
+
+		<h1 class="h1">Schema & Open Graph</h1>
+
+		<ul class="h2">
+			<li><a target="_blank" href="https://search.google.com/structured-data/testing-tool?hl=ru#url=http%3A%2F%2Fbertazzoni.wndrbase.com%2Fsurgery%2F">surgery</a></li>
+		</ul>
+
+	</div>
+
+{% endblock %}

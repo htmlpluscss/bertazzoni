@@ -1,0 +1,62 @@
+@font-face {
+	font-family: 'Spectral';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 400;
+	src: url('/fonts/spectral-v6-latin_latin-ext_cyrillic-regular.woff2') format('woff2'),
+		 url('/fonts/spectral-v6-latin_latin-ext_cyrillic-regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Spectral';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 400;
+	src: url('/fonts/spectral-v6-latin_latin-ext_cyrillic-italic.woff2') format('woff2'),
+		 url('/fonts/spectral-v6-latin_latin-ext_cyrillic-italic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Spectral';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 500;
+	src: url('/fonts/spectral-v6-latin_latin-ext_cyrillic-500.woff2') format('woff2'),
+		 url('/fonts/spectral-v6-latin_latin-ext_cyrillic-500.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Spectral';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 700;
+	src: url('/fonts/spectral-v6-latin_latin-ext_cyrillic-700.woff2') format('woff2'),
+		 url('/fonts/spectral-v6-latin_latin-ext_cyrillic-700.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 400;
+	src: url('/fonts/montserrat-v14-latin-ext_cyrillic_latin_cyrillic-ext-regular.woff2') format('woff2'),
+		 url('/fonts/montserrat-v14-latin-ext_cyrillic_latin_cyrillic-ext-regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 500;
+	src: url('/fonts/montserrat-v14-latin-ext_cyrillic_latin_cyrillic-ext-500.woff2') format('woff2'),
+		 url('/fonts/montserrat-v14-latin-ext_cyrillic_latin_cyrillic-ext-500.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 700;
+	src: url('/fonts/montserrat-v14-latin-ext_cyrillic_latin_cyrillic-ext-700.woff2') format('woff2'),
+		 url('/fonts/montserrat-v14-latin-ext_cyrillic_latin_cyrillic-ext-700.woff') format('woff');
+}

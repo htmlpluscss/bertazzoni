@@ -1,0 +1,27 @@
+	<header class="header">
+
+		<div class="header__flex">
+
+			<a class="header__logo" href="/">
+				<img src="/img/logo.svg" alt="{{ site }}">
+			</a>
+
+			<a class="header__tel" href="tel:+79057366464">
+				+7 (905) 736 64 64
+			</a>
+
+			<button class="header__btn btn" type="button" data-modal="form">
+				Записаться на прием
+			</button>
+
+			<button class="button btn-menu-toggle visible-md" type="button" aria-label="открыть меню">
+				<span class="btn-menu-toggle__top"></span>
+				<span class="btn-menu-toggle__center"></span>
+				<span class="btn-menu-toggle__bottom"></span>
+			</button>
+
+		</div>
+
+{% include "template/menu.html" %}
+
+	</header>
