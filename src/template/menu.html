@@ -1,92 +1,47 @@
 		<nav class="menu">
 
+{% set menu = [
+	{
+		name : "О компании",
+		link : ""
+	},
+	{
+		name : "Каталог",
+		link : ""
+	},
+	{
+		name : "Серии",
+		link : ""
+	},
+	{
+		name : "Контакты",
+		link : ""
+	},
+	{
+		name : "Доставка и оплата",
+		link : ""
+	},
+	{
+		name : "Гарантия",
+		link : ""
+	},
+	{
+		name : "Акции",
+		link : ""
+	}
+] %}
+
 			<ul class="menu__list">
 
-				<li class="menu__item">
-
-					<a class="menu__link" href="/about/">О Докторе</a>
-
-					<button class="button menu__arrow" type="button" aria-label="открыть меню">
-						<svg width="9" height="4" viewBox="0 0 9 4">
-							<path fill="none" stroke="#222" d="M1 0l3.5 4L8 0"/>
-						</svg>
-					</button>
-
-					<ul class="menu__sub">
-
-						<li class="menu__sub-item">
-
-							<a class="menu__sub-link" href="/press/">Пресса</a>
-
-						</li>
-
-						<li class="menu__sub-item">
-
-							<a class="menu__sub-link" href="/review/">Отзывы</a>
-
-						</li>
-
-					</ul>
-
-				</li>
+{% for item in menu %}
 
 				<li class="menu__item">
 
-					<a class="menu__link" href="/surgeries/">Операции</a>
-
-					<button class="button menu__arrow" type="button" aria-label="открыть меню">
-						<svg width="9" height="4" viewBox="0 0 9 4">
-							<path fill="none" stroke="#222" d="M1 0l3.5 4L8 0"/>
-						</svg>
-					</button>
-
-					<ul class="menu__sub">
-
-						<li class="menu__sub-item">
-
-							<a class="menu__sub-link" href="/surgery/">Абдоминопластика</a>
-
-						</li>
-
-						<li class="menu__sub-item">
-
-							<a class="menu__sub-link" href="/surgery/">Брахиопластика</a>
-
-						</li>
-
-						<li class="menu__sub-item">
-
-							<a class="menu__sub-link" href="/surgery/">Лечение гинекомастии</a>
-
-						</li>
-
-						<li class="menu__sub-item">
-
-							<a class="menu__sub-link" href="/surgery/">Интимная пластика</a>
-
-						</li>
-
-						<li class="menu__sub-item">
-
-							<a class="menu__sub-link" href="/surgery/">Коррекция рубцов</a>
-
-						</li>
-
-					</ul>
+					<a class="menu__link" href="/{{ item.link }}">{{ item.name }}</a>
 
 				</li>
 
-				<li class="menu__item">
-
-					<a class="menu__link" href="/before-after/">До и После</a>
-
-				</li>
-
-				<li class="menu__item">
-
-					<a class="menu__link" href="/contact/">Контакты</a>
-
-				</li>
+{% endfor %}
 
 			</ul>
 

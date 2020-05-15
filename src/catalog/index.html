@@ -1,0 +1,18 @@
+{% set title = "Категории товаров" %}
+
+{% set description = "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi u" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="catalog">
+
+{% include "catalog/header.html" %}
+{% include "catalog/list.html" %}
+
+	</article>
+
+{% include "_include/articles-news.html" %}
+
+{% endblock %}

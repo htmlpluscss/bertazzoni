@@ -1,9 +1,16 @@
 :root {
 
-	--text: #222;
-	--black: #232323;
+	--color: #000;
+	--border: #dcdcdc;
+	--text: #919191;
+	--black: #202020;
 	--error: #f00;
-	--bg: #f5ecec;
+	--green: #019107;
+	--yellow: #ffcb12;
+	--yellow-hover: #3f3f3f;
+	--gray: #dbdbdb;
+
+	--transitionDefault: .3s;
 
 }
 

@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-
+color: red !important;
 }
 
 html {
@@ -16,11 +16,11 @@ html {
 
 body {
 
-	color: var(--text);
+	color: var(--color);
 	min-width: 320px;
-	font-size: 20px;
+	font-size: 16px;
 	line-height: 1.4;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	-webkit-text-size-adjust: none;
 	-webkit-overflow-scrolling: touch;
 	-ms-overflow-style: scrollbar;
@@ -29,7 +29,9 @@ body {
 	flex-direction: column;
 	overflow-y: scroll;
 	position: relative;
-	background-color: var(--bg);
+	background-color: var(--black);
+background-image: url(/css/catalog.png);
+background-position: center 0;
 
 	/* IE10+ CSS styles go here */
 	@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -85,7 +87,7 @@ svg {
 hr {
 
 	border: 0;
-	height: 2px;
+	height: 1px;
 	background-color: var(--black);
 
 }
@@ -108,7 +110,10 @@ table {
 
 .h1 {
 
-	font: 700 32px/1.25 Spectral;
+	text-align: center;
+	font: 40px/54px 'Open Sans';
+
+/*
 
 	@media ($mdWidth) {
 
@@ -116,27 +121,14 @@ table {
 		line-height: 1.33;
 
 	}
-
-}
-
-.head {
-
-	font-size: 24px;
-	font-weight: bold;
-	line-height: 1.33;
-	color: var(--black);
-
-	@media ($mdWidth) {
-
-		font-size: 18px;
-
-	}
-
+ */
 }
 
 .h2 {
 
-	font: 700 24px/1.33 Spectral;
+	text-align: center;
+	font: 29px/39px 'Open Sans';
+/*
 
 	@media ($mdWidth) {
 
@@ -144,37 +136,12 @@ table {
 		line-height: 1.4;
 
 	}
-
+ */
 }
 
 .h3 {
 
-	font-size: 20px;
-	font-weight: bold;
-	line-height: 1.6;
-
-	@media ($mdWidth) {
-
-		font-size: 16px;
-		line-height: 1.5;
-
-	}
-
-}
-
-.h4 {
-
-	font-size: 16px;
-	font-weight: bold;
-	line-height: 1;
-	color: var(--text);
-
-	@media ($mdWidth) {
-
-		font-size: 14px;
-		font-weight: bold;
-
-	}
+	font: 700 30px/40px 'Roboto Slab';
 
 }
 
@@ -198,21 +165,8 @@ nav {
 
 	flex-shrink: 0;
 	flex-grow: 1;
-	padding-top: 160px;
 	display: flex;
 	flex-direction: column;
-
-	@media ($mdWidth) {
-
-		padding-top: 96px;
-
-	}
-
-	@media ($smWidth) {
-
-		padding-top: 88px;
-
-	}
 
 }
 
@@ -220,24 +174,6 @@ nav {
 
 	flex-shrink: 0;
 	flex-grow: 1;
-
-}
-
-.fade-in {
-
-	transition-property: opacity;
-	transition-duration: 900ms;
-	transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-	transition-delay: 100ms;
-
-	opacity: 0.001;
-	position: relative;
-
-	&--show {
-
-		opacity: 1;
-
-	}
 
 }
 

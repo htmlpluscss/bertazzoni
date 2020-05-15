@@ -5,7 +5,7 @@
 	border-radius: 0;
 	font-family: inherit;
 	background-color: transparent;
-	transition: .1s;
+	transition: var(--transitionDefault);
 	cursor: pointer;
 	user-select: none;
 	position: relative;
@@ -43,8 +43,6 @@
 	white-space: nowrap;
 
 	padding: 0 30px;
-	letter-spacing: 1px;
-	min-width: 280px;
 
 	height: 64px;
 	font-size: 16px;

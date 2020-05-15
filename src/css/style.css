@@ -10,26 +10,15 @@
 @import url(header.css);
 @import url(menu.css);
 @import url(footer.css);
-@import url(member.css);
 @import url(social.css);
 
-@import url(top-img.css);
-@import url(surgeries.css);
+@import url(home-slider.css);
+@import url(home-readme.css);
+@import url(home-category.css);
+@import url(home-technology.css);
+@import url(home-about.css);
+@import url(home-novelty.css);
 
-@import url(review.css);
-@import url(readme.css);
+@import url(articles-news.css);
 
-@import url(certificates.css);
-@import url(education-qualification.css);
-
-@import url(contact.css);
-
-@import url(surgery.css);
-@import url(accordion.css);
-@import url(faq.css);
-@import url(adult.css);
-
-@import url(before-after.css);
-
-@import url(press.css);
-@import url(scroll-observer.css);
+@import url(catalog.css);

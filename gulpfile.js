@@ -194,7 +194,7 @@ gulp.task('copy-js', function() {
 // big scripts
 	return gulp.src([
 		'src/js/min/swiper.min.js',
-		'src/js/min/inputmask.min.js',
+//		'src/js/min/inputmask.min.js',
 		])
 		.pipe(gulp.dest('build/js'));
 
@@ -212,11 +212,11 @@ gulp.task('copy', function() {
 
 gulp.task('ftp', function () {
 
-	if(!config) {
+//	if(!config) {
 
 		return true;
 
-	}
+//	}
 
 	const f = filter('**/*.html', {restore: true});
 

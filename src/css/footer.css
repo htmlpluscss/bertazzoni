@@ -1,33 +1,104 @@
 .footer {
 
 	flex-shrink: 0;
+	 background-color: var(--black);
+	color: #fff;
+	padding: 30px 0 60px;
+
+	&__logo {
+
+		display: flex;
+		justify-content: center;
+
+	}
+
+	hr {
+
+		background-color: #c0c0c0;
+		margin: 24px 0;
+
+	}
 
 	&__flex {
 
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
-		padding: 32px;
 
-		@media ($smWidth) {
+	}
 
-			padding: 32px 16px;
+	&__right {
+
+		width: 376px;
+
+	}
+
+	&__left {
+
+		display: flex;
+
+	}
+
+	&__menu {
+
+		width: 320px;
+		font-size: 15px;
+		line-height: 30px;
+
+		a {
+
+			color: #fff;
+
+		}
+
+		&:first-child {
+
+			width: 334px;
+			padding-left: 36px;
+
+			p {
+
+				padding-left: 36px;
+				line-height: 40px;
+
+			}
 
 		}
 
 	}
 
-	&__copyright {
+	&__head {
 
-		font-size: 16px;
-		font-weight: 500;
-		color: var(--text);
-		flex-shrink: 0;
-		order: 1;
+		text-transform: uppercase;
+		font: 20px/26px 'Roboto Slab';
+		margin: 24px 0 12px;
+		letter-spacing: .2px;
 
-		@media ($mdWidth) {
+	}
 
-			font-size: 12px;
+	&__form {
+
+		position: relative;
+		margin-top: 24px;
+
+		.input {
+
+			height: 63px;
+			background: #000;
+			border: 1px solid #FFF;
+			padding: 20px 19px;
+			font-family: Open Sans;
+			font-size: 20px;
+			line-height: 23px;
+			color: #ABABAB;
+
+		}
+
+		button {
+
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: var(--yellow);
 
 		}
 
@@ -35,34 +106,8 @@
 
 	&__social {
 
-		order: 2;
-		flex-shrink: 0;
-
-		@media ($mdWidth) {
-
-			svg {
-
-				width: auto;
-				height: 24px;
-
-			}
-
-		}
+		margin: 40px 0;
 
 	}
-/*
-	&__menu {
 
-		column-count: 2;
-		column-gap: 20px;
-		column-width: 280px;
-
-		@media ($mdWidth) {
-
-			columns: auto;
-
-		}
-
-	}
- */
 }

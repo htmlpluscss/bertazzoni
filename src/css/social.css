@@ -6,7 +6,7 @@
 
 		display: flex;
 		align-items: center;
-		margin-left: 32px;
+		margin-left: 15px;
 
 		&:first-child {
 
@@ -22,7 +22,8 @@
 
 		svg {
 
-			fill: var(--text);
+			fill: var(--yellow);
+			transition: var(--transitionDefault);
 
 		}
 
@@ -30,7 +31,7 @@
 
 			&:hover svg {
 
-				fill: var(--black);
+				fill: var(--yellow-hover);
 
 			}
 

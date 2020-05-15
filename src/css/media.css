@@ -16,14 +16,10 @@
 .center {
 
 	margin: 0 auto;
-	width: 1280px;
+	width: 1440px;
+	padding: 0 45px;
 	max-width: 100%;
 	position: relative;
-
-}
-
-@media (max-width: 1500px) {
-
 
 }
 
@@ -36,7 +32,7 @@
 
 	.center {
 
-		width: 1152px;
+		padding: 0 30px;
 
 	}
 
@@ -58,7 +54,7 @@
 
 	.center {
 
-		width: 640px;
+		padding: 0 20px;
 
 	}
 
@@ -80,7 +76,7 @@
 
 	.center {
 
-		padding: 0 16px;
+		padding: 0 20px;
 
 	}
 
