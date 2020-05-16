@@ -1,28 +1,74 @@
-	<div class="articles-news">
+	<aside class="articles-news">
 
 		<div class="center">
 
-			<picture>
+			<h3 class="h1">
+				Статьи и новости
+			</h3>
 
-				<source srcset="/img/main/top/320x182.webp 1x, /img/main/top/640x364.webp 2x" type="image/webp" media="(max-width: 320px)">
-				<source srcset="/img/main/top/320x182.jpg 1x, /img/main/top/640x364.jpg 2x" media="(max-width: 320px)">
+			<ul class="articles-news__list">
 
-				<source srcset="/img/main/top/360x204.webp 1x, /img/main/top/720x408.webp 2x" type="image/webp" media="(max-width: 360px)">
-				<source srcset="/img/main/top/360x204.jpg 1x, /img/main/top/720x408.jpg 2x" media="(max-width: 360px)">
+{% for item in [1,2,3] %}
 
-				<source srcset="/img/main/top/428x242.webp 1x, /img/main/top/856x484.webp 2x" type="image/webp" media="(max-width: 428px)">
-				<source srcset="/img/main/top/428x242.jpg 1x, /img/main/top/856x484.jpg 2x" media="(max-width: 428px)">
+				<li class="articles-news__item">
 
-				<source srcset="/img/main/top/768x436.webp 1x, /img/main/top/1536x872.webp 2x" type="image/webp" media="(max-width: 768px)">
-				<source srcset="/img/main/top/768x436.jpg 1x, /img/main/top/1536x872.jpg 2x" media="(max-width: 768px)">
+					<div class="articles-news__head">
 
-				<source srcset="/img/main/top/1280x720.webp 1x, /img/main/top/2560x1440.webp 2x" type="image/webp">
-				<source srcset="/img/main/top/1280x720.jpg 1x, /img/main/top/2560x1440.jpg 2x">
+						<time class="articles-news__date" datetime="2020-04-04">
+							04.04.2020
+						</time>
 
-				<img class="top-img__picture" src="/img/main/top/1280x720.jpg" alt="" loading="lazy" width="1280" height="720">
+						<div class="articles-news__category">
+							Статьи
+						</div>
 
-			</picture>
+					</div>
+
+					<a href="/" class="articles-news__link">
+
+						<picture>
+
+							<source srcset="/img/articles-news/{{ loop.index }}--280x183.webp 1x, /img/articles-news/{{ loop.index }}--560x366x.webp 2x" type="image/webp" media="(max-width: 320px)">
+							<source srcset="/img/articles-news/{{ loop.index }}--280x183.jpg 1x, /img/articles-news/{{ loop.index }}--560x366.jpg 2x" media="(max-width: 320px)">
+
+							<source srcset="/img/articles-news/{{ loop.index }}--320x210.webp 1x, /img/articles-news/{{ loop.index }}--640x420x.webp 2x" type="image/webp" media="(max-width: 360px)">
+							<source srcset="/img/articles-news/{{ loop.index }}--320x210.jpg 1x, /img/articles-news/{{ loop.index }}--640x420.jpg 2x" media="(max-width: 360px)">
+
+							<source srcset="/img/articles-news/{{ loop.index }}--437x286.webp 1x, /img/articles-news/{{ loop.index }}--874x572x.webp 2x" type="image/webp">
+							<source srcset="/img/articles-news/{{ loop.index }}--437x286.jpg 1x, /img/articles-news/{{ loop.index }}--874x572.jpg 2x">
+
+							<img class="articles-news__img" src="/img/articles-news/{{ loop.index }}--437x286.jpg" alt="{{ item.name }}" loading="lazy" width="437" height="286">
+
+						</picture>
+
+						<div class="articles-news__text">
+
+							<h4 class="articles-news__title">
+								1882/2017. Bertazzoni celebrates 135 years
+							</h4>
+
+							<p class="articles-news__intro">
+								Heritage Series by Bertazzoni
+							</p>
+
+						</div>
+
+					</a>
+
+				</li>
+
+{% endfor %}
+
+			</ul>
+
+			<div class="articles-news__all">
+
+				<a href="/" class="btn">
+					Все новости и статьи
+				</a>
+
+			</div>
 
 		</div>
 
-	</div>
+	</aside>

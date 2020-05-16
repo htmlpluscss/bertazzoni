@@ -2,14 +2,21 @@
 
 {% set description = "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi u" %}
 
+{% set breadcrumbs = [
+	{
+		name : "Категории товаров",
+		link : "categories"
+	}
+] %}
+
 {% extends "template/base.html" %}
 
 {% block content %}
 
-	<article class="catalog">
+	<article class="categories">
 
-{% include "catalog/header.html" %}
-{% include "catalog/list.html" %}
+{% include "categories/header.html" %}
+{% include "categories/list.html" %}
 
 	</article>
 

@@ -1,7 +1,135 @@
-.home-article {
+.articles-news {
 
-	height: 763px;
-	outline:1px solid red;
+	background-color: #fff;
+	padding: 68px 0;
+
+	&__list {
+
+		display: flex;
+		margin: 20px -10px;
+
+	}
+
+	&__item {
+
+		margin: 10px;
+
+	}
+
+	&__head {
+
+		display: flex;
+		align-items: center;
+		margin: 15px 0;
+
+	}
+
+	&__link {
+
+		display: block;
+		position: relative;
+
+		&::before {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			border: 1px solid #e2e0e0;
+
+		}
+
+	}
+
+	&__img {
+
+		display: block;
+
+	}
+
+	&__date {
+
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 27px;
+		padding-left: 24px;
+		color: #919191;
+		position: relative;
+
+		&::before {
+
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			top: 9px;
+			left: 0;
+			content: '';
+			border-radius: 50%;
+			background-color: #c4c4c4;
+
+		}
+
+	}
+
+	&__category {
+
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 27px;
+		color: #393939;
+		margin-left: 60px;
+		position: relative;
+
+		&::before {
+
+			position: absolute;
+			width: 2px;
+			height: 20px;
+			top: 6px;
+			left: -28px;
+			content: '';
+			background-color: #393939;
+
+		}
+
+	}
+
+	&__text {
+
+		top: -2px;
+		position: relative;
+		background-color: #fff;
+		margin: -50px 20px 0;
+		padding: 18px 24px 50px;
+
+	}
+
+	&__title {
+
+		font-family: Roboto Slab;
+		font-size: 25px;
+		line-height: 33px;
+		font-weight: 400;
+
+	}
+
+	&__intro {
+
+		font-style: italic;
+		font-size: 20px;
+		line-height: 27px;
+		color: #ababab;
+		margin-top: 12px;
+
+	}
+
+	&__all {
+
+		display: flex;
+		justify-content: center;
+
+	}
 
 }
-

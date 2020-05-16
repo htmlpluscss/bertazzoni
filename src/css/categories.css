@@ -1,0 +1,78 @@
+.categories {
+
+	color: #fff;
+	background-color: var(--black);
+	padding: 16px 0;
+
+	&__header {
+
+		padding: 36px 0;
+
+		P {
+
+			text-align: center;
+			font-style: italic;
+			font-size: 15px;
+			line-height: 22px;
+
+		}
+
+	}
+
+	&__list {
+
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 1240px;
+		margin: 0 auto 80px;
+
+	}
+
+	&__item {
+
+		width: calc(25% - 20px);
+		margin: 22px 10px;
+
+	}
+
+	&-card {
+
+		display: block;
+		position: relative;
+
+		&__img {
+
+			display: block;
+
+		}
+
+		&__name {
+
+			background-color: var(--yellow);
+			text-align: center;
+			font-size: 25px;
+			line-height: 34px;
+			height: 61px;
+			border-top: 1px solid #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: var(--color);
+			transition: var(--transitionDefault);
+
+		}
+
+		@media ($desktop) {
+
+			&:hover &__name {
+
+				color: #fff;
+				background-color: var(--yellow-hover);
+
+			}
+
+		}
+
+	}
+
+}

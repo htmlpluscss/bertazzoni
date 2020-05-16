@@ -1,0 +1,78 @@
+	<div class="breadcrumbs">
+
+		<div class="center">
+
+			<ul class="breadcrumbs__list">
+
+				<li class="breadcrumbs__item">
+
+					<a class="breadcrumbs__link" href="/">
+						Главная
+					</a>
+
+				</li>
+
+{% for item in breadcrumbs %}
+
+				<li class="breadcrumbs__item">
+
+{% if loop.last %}
+
+					{{ item.name }}
+
+{% else %}
+
+					<a class="breadcrumbs__link" href="/{{ item.link }}/">
+						{{ item.name }}
+					</a>
+
+{% endif %}
+
+				</li>
+
+{% endfor %}
+
+			</ul>
+
+		</div>
+
+	</div>
+
+	<script type="application/ld+json">
+
+		{
+
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement":
+			[
+
+				{
+					"@type": "ListItem",
+					"position": "1",
+					"item":
+					{
+						"@id": "{{ url }}",
+						"name": "{{ site }}"
+					}
+				}
+
+{% for item in breadcrumbs %}
+				,
+				{
+					"@type": "ListItem",
+					"position": "{{ loop.index + 1 }}",
+					"item":
+					{
+						"@id": "{{ url }}/{{ item.link }}",
+						"name": "{{ item.name }}"
+					}
+				}
+
+{% endfor %}
+
+			]
+
+		}
+
+	</script>

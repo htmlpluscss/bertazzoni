@@ -18,37 +18,6 @@
 						"closes": "21:00"
 					}
 				}
-			},
-			{
-				"@context": "https://schema.org",
-				"@type": "WPHeader",
-				"name": "{{ title }}",
-				"description": "{{ description }}"
-			},
-			{
-				"@context": "https://schema.org",
-				"@type": "BreadcrumbList",
-				"itemListElement":
-				[
-					{
-						"@type": "ListItem",
-						"position": "1",
-						"item":
-						{
-							"@id": "{{ url }}",
-							"name": "{{ site }}"
-						}
-					},
-					{
-						"@type": "ListItem",
-						"position": "2",
-						"item":
-						{
-							"@id": "{{ url }}/{{ folder }}/",
-							"name": "{{ title }}"
-						}
-					}
-				]
 			}
 
 		]

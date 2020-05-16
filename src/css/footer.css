@@ -48,6 +48,16 @@
 
 			color: #fff;
 
+			@media ($desktop) {
+
+				&:hover {
+
+					color: var(--yellow);
+
+				}
+
+			}
+
 		}
 
 		&:first-child {
@@ -91,6 +101,17 @@
 			line-height: 23px;
 			color: #ABABAB;
 
+			@media ($desktop) {
+
+				&:hover,
+				&:focus {
+
+					border-color: var(--yellow);
+
+				}
+
+			}
+
 		}
 
 		button {
@@ -99,6 +120,16 @@
 			top: 0;
 			right: 0;
 			background-color: var(--yellow);
+
+			@media ($desktop) {
+
+				&:hover {
+
+					background-color: #fff;
+
+				}
+
+			}
 
 		}
 
