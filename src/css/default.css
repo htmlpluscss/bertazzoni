@@ -30,8 +30,8 @@ body {
 	overflow-y: scroll;
 	position: relative;
 	background-color: var(--black);
-/* background-image: url(/css/categories.png); */
-background-position: center 0;
+/* background-image: url(/css/products.png); */
+background-position: center 65px;
 
 	/* IE10+ CSS styles go here */
 	@media (-ms-high-contrast: none), (-ms-high-contrast: active) {

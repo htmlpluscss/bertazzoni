@@ -1,0 +1,30 @@
+.related {
+
+	padding: 30px 0 90px;
+	background-color: #fff;
+
+	&__list {
+
+		display: flex;
+		flex-wrap: wrap;
+		margin: 26px -11px -11px;
+
+	}
+
+	&__item {
+
+		margin: 11px;
+		display: flex;
+		width: calc(100% / 4 - 22px);
+
+	}
+
+	&__all {
+
+		display: flex;
+		justify-content: center;
+		margin-top: 35px;
+
+	}
+
+}

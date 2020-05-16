@@ -1,0 +1,23 @@
+.sort {
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 20px;
+	margin-bottom: 18px;
+
+	&__right {
+
+		display: flex;
+		align-items: center;
+
+	}
+
+	&__control {
+
+		margin-left: 25px;
+		min-width: 258px;
+
+	}
+
+}

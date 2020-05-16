@@ -1,0 +1,12 @@
+.filter {
+
+	background-color: #ececec;
+
+	&__fieldset {
+
+		background-color: #fff;
+		margin: 6px;
+
+	}
+
+}

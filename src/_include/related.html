@@ -1,0 +1,33 @@
+	<aside class="related">
+
+		<div class="center">
+
+			<h3 class="h1">
+				Рекомендуемые товары
+			</h3>
+
+			<ul class="related__list">
+
+{% for item in [1,2,3,4] %}
+
+				<li class="related__item">
+
+{% include "products/card.html" %}
+
+				</li>
+
+{% endfor %}
+
+			</ul>
+
+			<div class="related__all">
+
+				<a href="/" class="btn">
+					Показать еще
+				</a>
+
+			</div>
+
+		</div>
+
+	</aside>

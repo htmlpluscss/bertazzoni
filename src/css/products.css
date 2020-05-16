@@ -1,0 +1,230 @@
+.products {
+
+	padding: 30px 0;
+	background-color: #fff;
+
+	&__flex {
+
+		display: flex;
+		margin-top: 26px;
+
+	}
+
+	&__left {
+
+		width: 320px;
+		margin-right: 20px;
+		flex-shrink: 0;
+
+	}
+
+	&__right {
+
+		flex-grow: 1;
+
+	}
+
+	&__list {
+
+		display: flex;
+		flex-wrap: wrap;
+		margin: -11px;
+
+	}
+
+	&__item {
+
+		margin: 11px;
+		display: flex;
+		width: calc(100% / 3 - 22px);
+
+	}
+
+	&-card {
+
+		height: 100%;
+		background-color: #fff;
+		border: 1px solid #e2e0e0;
+		position: relative;
+		padding: 30px 26px;
+		transition: var(--transitionDefault);
+
+		&:hover {
+
+			border-color: #000;
+
+		}
+
+		&:hover &__hover {
+
+			visibility: visible;
+			pointer-events: auto;
+			opacity: 1;
+			border-color: #000;
+
+		}
+
+		&[data-label]::after {
+
+			position: absolute;
+			top: 5px;
+			left: 5px;
+			content: attr(data-label);
+			color: #fff;
+			padding: 0 15px;
+			background-color: #0b0b0b;
+			font: 15px/34px 'Roboto Slab';
+
+		}
+
+		&__link {
+
+			display: block;
+			padding: 16px 0 2px;
+
+		}
+
+		&__img {
+
+			width: 250px;
+			height: 250px;
+			object-fit: contain;
+			display: block;
+			margin: 0 auto;
+
+		}
+
+		&__name {
+
+			text-align: center;
+			min-height: 96px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font: 18px/24px 'Roboto Slab';
+
+			a  {
+
+				color: var(--color);
+
+			}
+
+
+		}
+
+		&__row {
+
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+		}
+
+		&__price {
+
+			font: 700 20px/26px 'Roboto Slab';
+
+		}
+
+		&__availability {
+
+			color: #d6d6d6;
+			font: 15px/20px 'Roboto Slab';
+			position: relative;
+
+			&.is-available {
+
+				color: var(--green);
+
+				&::before {
+
+					position: absolute;
+					width: 4px;
+					height: 4px;
+					top: 10px;
+					left: -10px;
+					content: '';
+					border-radius: 50%;
+					background-color: var(--green);
+
+				}
+
+			}
+
+		}
+
+		&__favourite {
+
+			fill: var(--color);
+			margin: 14px 10px 0;
+
+			@media ($desktop) {
+
+				button:hover {
+
+					fill: var(--yellow);
+
+				}
+
+			}
+
+		}
+
+		&__param {
+
+			font-size: 15px;
+			line-height: 20px;
+			display: block;
+
+			tbody {
+
+				display: block;
+				margin: 20px 0;
+
+			}
+
+			tr {
+
+				display: block;
+				margin: 13px 0;
+
+			}
+
+			th {
+
+				color: var(--text);
+				font-weight: 400;
+				display: inline;
+
+			}
+
+			td {
+
+				display: inline;
+
+			}
+
+		}
+
+		&__hover {
+
+			position: absolute;
+			top: 100%;
+			left: -1px;
+			right: -1px;
+			margin: -28px 0 0;
+			background-color: #fff;
+			border: 1px solid #e2e0e0;
+			border-top-color: #fff !important;
+			z-index: 1;
+			padding: 12px 25px;
+			pointer-events: none;
+			visibility: hidden;
+			opacity: 0;
+			transition: var(--transitionDefault);
+
+		}
+
+	}
+
+}

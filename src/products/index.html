@@ -1,0 +1,51 @@
+{% set title = "Духовые шкафы" %}
+
+{% set description = "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi u" %}
+
+{% set breadcrumbs = [
+	{
+		name : "Бытовая техника",
+		link : "categories"
+	},
+	{
+		name : "Духовые шкафы",
+		link : "products"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="products">
+
+		<div class="center">
+
+			<h1 class="h1">
+				{{ title }}
+			</h1>
+
+			<div class="products__flex">
+
+				<div class="products__left">
+
+{% include "products/filter.html" %}
+
+				</div>
+
+				<div class="products__right">
+
+{% include "products/sort.html" %}
+{% include "products/list.html" %}
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</article>
+
+{% include "_include/related.html" %}
+
+{% endblock %}
