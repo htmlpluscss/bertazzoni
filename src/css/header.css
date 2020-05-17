@@ -118,16 +118,6 @@
 		margin: 0 15px;
 		position: relative;
 
-		@media ($desktop) {
-
-			&:hover {
-
-				fill: var(--yellow);
-
-			}
-
-		}
-
 	}
 
 	&__cart {
@@ -256,6 +246,92 @@
 
 			transform: rotate(-225deg) scaleX(1.1);
 			top: 0;
+
+		}
+
+	}
+
+}
+
+.header-search {
+
+	position: relative;
+	height: 31px;
+	overflow: hidden;
+
+	&.is-open {
+
+		overflow: visible;
+
+	}
+
+	&.is-open &__input {
+
+		width: 370px;
+		opacity: 1;
+		padding-left: 25px;
+		padding-right: 55px;
+
+	}
+
+	&.is-open &__btn {
+
+		pointer-events: auto;
+		transition: 1s;
+
+	}
+
+	&__input {
+
+		top: -12px;
+		left: 12px;
+		width: 31px;
+		height: 55px;
+		background-color: #000;
+		border-color: #c7c7c7;
+		opacity: 0;
+		padding-left: 0;
+		padding-right: 0;
+		color: #fff;
+
+		&::placeholder {
+
+			font-style: italic;
+			font-weight: 300;
+			font-size: 15px;
+			color: #ddd;
+			opacity: 1;
+
+		}
+
+		&:focus {
+
+			border-color: #fff;
+
+			&::placeholder {
+
+				opacity: 1;
+
+			}
+
+		}
+
+	}
+
+	&__btn {
+
+		position: absolute;
+		top: 0;
+		right: 0;
+		pointer-events: none;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				fill: var(--yellow);
+
+			}
 
 		}
 

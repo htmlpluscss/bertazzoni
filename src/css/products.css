@@ -73,6 +73,7 @@
 			padding: 0 15px;
 			background-color: #0b0b0b;
 			font: 15px/34px 'Roboto Slab';
+			pointer-events: none;
 
 		}
 
@@ -80,6 +81,19 @@
 
 			display: block;
 			padding: 16px 0 2px;
+			color: var(--color);
+			position: relative;
+
+			&::after {
+
+				position: absolute;
+				top: -31px;
+				left: -27px;
+				right: -27px;
+				bottom: 0;
+				content: '';
+
+			}
 
 		}
 
@@ -101,12 +115,6 @@
 			align-items: center;
 			justify-content: center;
 			font: 18px/24px 'Roboto Slab';
-
-			a  {
-
-				color: var(--color);
-
-			}
 
 		}
 
