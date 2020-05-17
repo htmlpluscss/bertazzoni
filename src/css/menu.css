@@ -1,30 +1,88 @@
 .menu {
 
-	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9;
+	transition: var(--transitionDefault);
+	background-color: color(#0b0b0b a(50%));
+	opacity: 0;
+	pointer-events: none;
+	transition-delay: var(--transitionDefault);
+
+	.menu-show & {
+
+		opacity: 1;
+		pointer-events: auto;
+		transition-delay: 0s;
+
+	}
+
+	&__inner {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 274px;
+		background-color: #fff;
+		transition: var(--transitionDefault);
+		transform: translate3d(-274px,0,0);
+
+		.menu-show & {
+
+			transform: translate3d(0,0,0);
+			transition-delay: var(--transitionDefault);
+
+		}
+
+	}
+
+	&__header {
+
+		height: 40px;
+		background-color: #e1e1e1;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-left: 46px;
+		padding-right: 8px;
+
+	}
+
+	&__tel {
+
+		font-size: 14px;
+		font-weight: 700;
+		color: var(--color);
+
+	}
 
 	&__list {
+
+		margin: 25px 45px;
 
 	}
 
 	&__item {
 
-		margin: 0 40px;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 30px;
 
 	}
 
 	&__link {
 
-		font-size: 16px;
-		font-weight: bold;
-		line-height: 1;
-		letter-spacing: 1px;
-		color: var(--text);
+		color: #2f2f2f;
+		text-transform: uppercase;
 
 		@media ($desktop) {
 
 			&:hover {
 
-				color: color(var(--text) a(100%));
+				color: var(--text);
 
 			}
 
@@ -32,5 +90,33 @@
 
 	}
 
+	&__footer {
+
+		border: 1px solid #e4e4e4;
+		height: 56px;
+		display: flex;
+		align-items: center;
+		padding-left: 44px;
+		margin-top: 36px;
+
+	}
+
+	&__user {
+
+		font-size: 12px;
+		font-weight: bold;
+		display: flex;
+		align-items: center;
+		color: var(--color);
+
+		svg {
+
+			fill: #0a0a0a;
+			margin-right: 10px;
+			flex-shrink: 0;
+
+		}
+
+	}
 
 }
