@@ -122,7 +122,7 @@
 
 						if(showMoadalOk) {
 
-							BERTAZZONI.modalShow('info', showMoadalOk.split('|'));
+							BERTAZZONI.modalShow('info', ...showMoadalOk.split('|'));
 
 						}
 

@@ -36,7 +36,7 @@
 
 	};
 
-	BERTAZZONI.modalShow = (selector, info) => {
+	BERTAZZONI.modalShow = (selector, ...info) => {
 
 		if(!BERTAZZONI.activeModal){
 
