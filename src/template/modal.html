@@ -12,67 +12,48 @@
 
 			<div class="modal__item modal__item--info">
 
-				<h3 class="h1">
-					Спасибо за вашу заявку!
-				</h3>
+				<div class="modal__title h3"></div>
 
-				<p>
-					Администратор свяжется с вами в ближайшее время.
-				</p>
+				<div class="modal__text"></div>
 
-				<button class="modal-form__btn btn modal__close" type="button">
+				<button class="modal__submit btn modal__close" type="button">
 					Закрыть окно
 				</button>
 
 			</div>
 
+			<div class="modal__item modal__item--callback">
 
-			<div class="modal__item modal__item--form">
+				<form class="modal__form form" action="/ajax/callback.php" data-modal-info="Спасибо за вашу заявку!|Администратор свяжется с вами в ближайшее время.">
 
-				<form class="modal-form form" action="/ajax/order.php" autocomplete="off" novalidate="novalidate" data-ok-modal="info">
+					<h3 class="modal__title h3">
+						Заказать звонок
+					</h3>
 
-					<div class="modal-form__input">
+					<div class="modal__input">
 
-						<input class="input" placeholder="Имя">
-
-					</div>
-
-					<div class="modal-form__input">
-
-						<input class="input inputmask inputmask--phone" placeholder="Телефон" type="tel" required="required">
+						<input class="input" placeholder="Ваше имя">
 
 					</div>
 
-					<div class="modal-form__input">
+					<div class="modal__input">
 
-						<textarea class="input" placeholder="Комментарий"></textarea>
-
-					</div>
-
-					<div class="modal-form__checkbox">
-
-						<label class="checkbox">
-
-							<input type="checkbox" class="checkbox__input" required="required">
-
-							<span class="checkbox__label">
-								Я согласен/а на <a href="/" target="_blank">обработку персональных данных</a> и ознакомлен/а с&nbsp;<a href="/" target="_blank">Пользовательским соглашением</a>
-							</span>
-
-						</label>
+						<input class="input" placeholder="Ваш телефон" type="tel" required="required">
 
 					</div>
 
-					<button class="modal-form__btn btn form__submit">
-						Записаться на прием
+					<button class="modal__submit btn form__submit">
+						Отправить
 					</button>
 
 				</form>
 
 			</div>
 
-			<button type="button" class="modal__close modal__close-btn button">
-				Закрыть окно
+			<button type="button" class="modal__close modal__close-btn button" aria-label="Закрыть окно">
+				<svg width="18" height="18" viewBox="0 0 18 18">
+					<path d="M9.9942 9.0008l7.7996-7.7997a.7031.7031 0 10-.9944-.9944L8.9998 8.0064 1.2.2067a.7031.7031 0 10-.9944.9944l7.7996 7.7996-7.7996 7.7997a.7031.7031 0 10.9944.9944l7.7997-7.7996 7.7996 7.7996a.7008.7008 0 00.4972.2059.7031.7031 0 00.4972-1.2003L9.9942 9.0008z"/>
+				</svg>
 			</button>
 
 		</div>

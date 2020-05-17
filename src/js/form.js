@@ -38,10 +38,16 @@
 ((forms) => {
 
 	"use strict";
-/*
+
+	if(!forms.length) {
+
+		return;
+
+	}
+
 	Array.prototype.forEach.call(forms, (form) => {
 
-		var showMoadalOk = form.getAttribute('data-ok-modal'),
+		var showMoadalOk = form.getAttribute('data-modal-info'),
 			formRequired = form.querySelectorAll('[required]'),
 			formBtnSubmit = form.querySelector('.form__submit');
 
@@ -116,7 +122,7 @@
 
 						if(showMoadalOk) {
 
-							BERTAZZONI.modalShow(showMoadalOk);
+							BERTAZZONI.modalShow('info', showMoadalOk.split('|'));
 
 						}
 
@@ -163,13 +169,13 @@
 
 	});
 
-*/
 
-// input
-/*
+
+// inputRequired
+
 	var inputRequired = document.querySelectorAll('.input[required]');
 
-	var errorInput(el) => el.classList.toggle('input--error', !el.value);
+	var errorInput = (el) => el.classList.toggle('input--error', !el.value);
 
 	Array.prototype.forEach.call(inputRequired, (el) => {
 
@@ -178,7 +184,7 @@
 
 	});
 
-*/
+
 
 // checked
 

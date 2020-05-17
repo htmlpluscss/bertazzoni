@@ -36,7 +36,7 @@
 
 	};
 
-	BERTAZZONI.modalShow = (selector)=>{
+	BERTAZZONI.modalShow = (selector, info) => {
 
 		if(!BERTAZZONI.activeModal){
 
@@ -47,6 +47,13 @@
 		}
 
 		BERTAZZONI.activeModal = modal.querySelector('.modal__item--' + selector);
+
+		if(selector == 'info') {
+
+			BERTAZZONI.activeModal.querySelector('.modal__text').innerHTML = info[1] ? info[1] : '';
+			BERTAZZONI.activeModal.querySelector('.modal__title').innerHTML = info[0] ? info[0] : '';
+
+		}
 
 		Array.prototype.forEach.call(items,(el)=>{
 
