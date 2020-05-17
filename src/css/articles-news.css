@@ -28,6 +28,16 @@
 		display: block;
 		position: relative;
 
+		@media ($desktop) {
+
+			&:hover::before {
+
+				border-color: var(--text);
+
+			}
+
+		}
+
 		&::before {
 
 			position: absolute;
@@ -37,6 +47,7 @@
 			bottom: 0;
 			content: '';
 			border: 1px solid #e2e0e0;
+			transition: var(--transitionDefault);
 
 		}
 
@@ -107,10 +118,8 @@
 
 	&__title {
 
-		font-family: Roboto Slab;
-		font-size: 25px;
-		line-height: 33px;
-		font-weight: 400;
+		font: 25px/33px 'Roboto Slab';
+		color: #000;
 
 	}
 

@@ -73,4 +73,13 @@ https://github.com/htmlpluscss/
 		return (rect.top >= 0 && rect.bottom <= window.innerHeight);
 	};
 
+	// отделяем тысячи
+	BERTAZZONI.sepNumber = (str) => {
+		str = parseInt(str, 10).toString();
+		return str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+	}
+
+	// склеиваем тысячи
+	BERTAZZONI.strToNumber = (str) => parseInt(str.replace(/\s+/g,''), 10);
+
 })();

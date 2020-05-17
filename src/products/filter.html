@@ -17,6 +17,14 @@
 								от 40°C до 100°C
 							</span>
 
+							<span class="checkbox__check">
+
+								<svg width="18" height="15" viewBox="0 0 12 10">
+									<path d="M4.9736 6.4856L9.6327-.0371l1.6275 1.1625L5.331 9.4261.7956 5.5387l1.3016-1.5185z"/>
+								</svg>
+
+							</span>
+
 						</label>
 
 						<label class="checkbox">
@@ -25,6 +33,14 @@
 
 							<span class="checkbox__label">
 								30°С - 225°С
+							</span>
+
+							<span class="checkbox__check">
+
+								<svg width="18" height="15" viewBox="0 0 12 10">
+									<path d="M4.9736 6.4856L9.6327-.0371l1.6275 1.1625L5.331 9.4261.7956 5.5387l1.3016-1.5185z"/>
+								</svg>
+
 							</span>
 
 						</label>
@@ -236,7 +252,7 @@
 
 							<span class="checkbox__label">
 								18
-							</s15n>
+							</span>
 
 							<span class="checkbox__check">
 
@@ -335,7 +351,7 @@
 
 						<label class="checkbox">
 
-							<input type="radio" class="checkbox__input" type="radio" name="radio-123">
+							<input type="radio" class="checkbox__input" value="1" name="radio-123">
 
 							<span class="checkbox__label">
 								Да
@@ -353,7 +369,7 @@
 
 						<label class="checkbox">
 
-							<input type="radio" class="checkbox__input" type="radio" name="radio-123">
+							<input type="radio" class="checkbox__input" value="0" name="radio-123">
 
 							<span class="checkbox__label">
 								Нет
@@ -424,17 +440,19 @@
 
 				<div class="filter__fieldset">
 
-					<label class="filter__legend">
+					<label class="filter__legend is-open">
 						Цена (руб)
 						<span class="filter__legend-btn"></span>
 					</label>
 
 					<div class="filter__fieldset-inner">
 
-						<div class="slider-range" data-min="190" data-max="146000" data-start="25000,90000">
+						<div class="slider-range" data-min="1000" data-max="146000" data-start="25000,90000" data-step="1000">
 
 							<input type="hidden" class="slider-range__value-min" value="25000">
 							<input type="hidden" class="slider-range__value-max" value="90000">
+
+							<div class="slider-range__track"></div>
 
 							<div class="slider-range__key">
 
@@ -446,7 +464,7 @@
 
 									<div class="slider-range__input-control">
 
-										<input type="tel" class="input slider-range__input-min" value="25 000">
+										<input type="tel" class="input slider-range__input-min" value="25 000" maxlength="9">
 
 									</div>
 
@@ -460,26 +478,10 @@
 
 									<div class="slider-range__input-control">
 
-										<input type="tel" class="input slider-range__input-max" value="90 000">
+										<input type="tel" class="input slider-range__input-max" value="90 000" maxlength="9">
 
 									</div>
 
-								</div>
-
-							</div>
-
-							<div class="slider-range__touch">
-
-								<div class="slider-range__min">
-									190
-								</div>
-
-								<div class="slider-range__track">
-
-								</div>
-
-								<div class="slider-range__max">
-									146 000
 								</div>
 
 							</div>

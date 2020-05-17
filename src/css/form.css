@@ -97,11 +97,9 @@
 
 .input {
 
-	height: 48px;
-	line-height: 20px;
-
-	padding: 10px 15px;
-
+	height: 54px;
+	line-height: 24px;
+	padding: 15px 22px;
 	font-size: 16px;
 
 	width: 100%;
@@ -113,11 +111,10 @@
 	-webkit-transform: translateZ(0px); /* FIX for iOS safari https://forum.ionicframework.com/t/ion-input-shows-only-the-first-entered-character-on-ios/73107/5 */
 
 	background-color: #fff;
-	border: 0;
+	border: 1px solid var(--border);
 	border-radius: 0;
-
-	font: 300 20px/28px Spectral;
-	color: var(--text);
+	color: var(--color);
+	transition: var(--transitionDefault);
 
 	textarea& {
 
@@ -127,22 +124,6 @@
 		padding: 8px 15px;
 
 	}
-
-	@media ($mdWidth) {
-
-		font-size: 16px;
-		height: 32px;
-		padding: 2px 8px;
-
-		textarea& {
-
-			padding: 0 8px;
-			height: 128px;
-
-		}
-
-	}
-
 
 	&::placeholder {
 
@@ -166,14 +147,14 @@
 
 	&:hover {
 
-		box-shadow: 0 2px 8px rgba(34, 34, 34, 0.2);
+		border-color: var(--text);
 
 	}
 
 	&:focus {
 
 		outline: none;
-		box-shadow: 0 2px 8px rgba(34, 34, 34, 0.2);
+		border-color: var(--color);
 
 		&::placeholder {
 
@@ -214,6 +195,87 @@
 
 }
 
+/* input-label */
+.input-label {
+
+	display: block;
+	width: 100%;
+	position: relative;
+
+	&__label {
+
+		font-size: 16px;
+		line-height: 22px;
+		color: var(--text);
+
+		position: absolute;
+		top: 16px;
+		left: 23px;
+		pointer-events: none;
+		display: flex;
+		transition: var(--transitionDefault);
+
+		.input--error + & {
+
+			color: var(--error);
+
+		}
+
+	}
+
+	&__input[required] ~ &__label::after {
+
+		content: '*';
+		color: #d6a700;
+
+	}
+
+	&__input:focus ~ &__label,
+	&--no-empty &__label {
+
+		top: 0 !important;
+		font-size: 13px;
+		color: var(--color);
+
+		&::after {
+
+			display: none;
+
+		}
+
+	}
+
+	&__text {
+
+		font-size: 12px;
+		display: block;
+		position: relative;
+		top: 5px;
+
+		&--error {
+
+			color: var(--error);
+			display: none;
+
+		}
+
+	}
+
+	&--error &__input {
+
+		border-color: var(--error);
+
+	}
+
+	&--error &__text--error {
+
+		display: block;
+
+	}
+
+}
+
+/* checkbox */
 
 .checkbox {
 

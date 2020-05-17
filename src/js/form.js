@@ -1,22 +1,59 @@
-((forms)=>{
+
+// input-label
+((inputLabel) => {
+
+	if(!inputLabel.length) {
+
+		return;
+
+	}
+
+	var focusInputLabel = (el,required) => {
+
+		el.parentNode.classList.toggle('input-label--no-empty', el.value);
+
+		if(required && el.getAttribute('required') !== null) {
+
+			el.parentNode.classList.toggle('input-label--error', !el.value);
+
+		}
+
+	}
+
+	Array.prototype.forEach.call(inputLabel, (el) => {
+
+		el.addEventListener('focus', ()=> focusInputLabel(el));
+		el.addEventListener('keyup', ()=> focusInputLabel(el,true));
+		el.addEventListener('blur', ()=> focusInputLabel(el,true));
+
+		focusInputLabel(el);
+
+		PubSub.subscribe('DOMContentLoaded', ()=> focusInputLabel(el));
+
+	});
+
+})(document.querySelectorAll('.input-label__input'));
+
+
+((forms) => {
 
 	"use strict";
-
-	Array.prototype.forEach.call(forms, function(form){
+/*
+	Array.prototype.forEach.call(forms, (form) => {
 
 		var showMoadalOk = form.getAttribute('data-ok-modal'),
 			formRequired = form.querySelectorAll('[required]'),
 			formBtnSubmit = form.querySelector('.form__submit');
 
 		// отправка формы
-		form.addEventListener('submit', function(e) {
+		form.addEventListener('submit', (e) => {
 
 			e.preventDefault();
 
 			var novalidate = false,
 				formData = new FormData(form);
 
-			Array.prototype.forEach.call(formRequired, function(input){
+			Array.prototype.forEach.call(formRequired, (input) => {
 
 				if(input.offsetParent === null) {
 
@@ -67,7 +104,7 @@
 
 				}
 
-				xhr.onreadystatechange = function() {
+				xhr.onreadystatechange = () => {
 
 					if (xhr.readyState != 4){
 
@@ -126,41 +163,34 @@
 
 	});
 
-// input
+*/
 
+// input
+/*
 	var inputRequired = document.querySelectorAll('.input[required]');
 
-	function errorInput(el){
+	var errorInput(el) => el.classList.toggle('input--error', !el.value);
 
-		el.classList.toggle('input--error',!el.value);
+	Array.prototype.forEach.call(inputRequired, (el) => {
 
-	}
-
-	Array.prototype.forEach.call(inputRequired, function(el){
-
-		el.addEventListener('keyup', function() {
-
-			errorInput(el);
-
-		});
-
-		el.addEventListener('blur', function() {
-
-			errorInput(el);
-
-		});
+		el.addEventListener('keyup', () => errorInput(el));
+		el.addEventListener('blur', () => errorInput(el));
 
 	});
 
+*/
+
 // checked
+
+/*
 
 	var checkbox = document.querySelectorAll('.checkbox[required]');
 
-	Array.prototype.forEach.call(checkbox, function(el){
+	Array.prototype.forEach.call(checkbox, (el) => {
 
 		var input = el.querySelector('input');
 
-		input.addEventListener('change', function() {
+		input.addEventListener('change', () => {
 
 			if(input.checked) {
 
@@ -171,5 +201,7 @@
 		});
 
 	});
+
+*/
 
 })(document.querySelectorAll('.form'));
