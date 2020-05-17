@@ -29,7 +29,7 @@ body {
 	flex-direction: column;
 	overflow-y: scroll;
 	position: relative;
-	background-color: var(--black);
+
 /* background-image: url(/css/products.png); */
 background-position: center 65px;
 

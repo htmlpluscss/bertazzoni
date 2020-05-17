@@ -1,7 +1,6 @@
 .products {
 
 	padding: 30px 0;
-	background-color: #fff;
 
 	&__flex {
 
@@ -108,7 +107,6 @@
 				color: var(--color);
 
 			}
-
 
 		}
 

@@ -219,18 +219,9 @@
 
 	display: block;
 	position: relative;
-	cursor: pointer;
 
-	font-size: 16px;
-	font-weight: 500;
-	line-height: 1.5;
-
-	@media ($mdWidth) {
-
-		font-size: 12px;
-		line-height: 1.33;
-
-	}
+	font-size: 17px;
+	line-height: 27px;
 
 	&__input {
 
@@ -244,65 +235,112 @@
 
 	}
 
-	&__label {
+	&__input[disabled="disabled"] ~ &__label {
 
-		display: block;
-		padding-left: 64px;
-
-		@media ($mdWidth) {
-
-			padding-left: 48px;
-
-		}
-
-		@media ($smWidth) {
-
-			padding-left: 32px;
-
-		}
+		pointer-events: none;
+		color: #cdcdcd !important;
 
 		&::before {
 
-			width: 32px;
-			height: 32px;
-			position: absolute;
-			top: 4px;
-			left: 0;
-			bottom: 0;
-			margin: auto;
-			content: '';
-			background-color: #fff;
-
-			@media ($mdWidth) {
-
-				width: 24px;
-				height: 24px;
-				top: 0;
-
-			}
-
-			@media ($smWidth) {
-
-				top: 3px;
-				margin: 0;
-
-			}
+			border-color: transparent;
 
 		}
 
 	}
 
-	&:hover &__label::before {
+	@media ($desktop) {
 
-		box-shadow: 0 2px 8px rgba(34, 34, 34, 0.2);
+		&:hover &__label {
+
+			color: var(--color);
+
+		}
 
 	}
 
-	&__input[type="checkbox"]:checked + &__label::before {
+	&__label {
 
-		background-position: center;
-		background-repeat: no-repeat;
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Crect width='10' height='10' fill='%23222'%3E%3C/rect%3E%3C/svg%3E%0A");
+		display: block;
+		padding-left: 44px;
+		cursor: pointer;
+		color: var(--text);
+
+		&::before {
+
+			width: 25px;
+			height: 25px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: '';
+			background-color: #f4f4f4;
+			border: 1px solid #e2e2e2;
+			transition: var(--transitionDefault);
+
+		}
+
+	}
+
+	&__check {
+
+		width: 0;
+		height: 27px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		transition: var(--transitionDefault);
+		transition-property: opacity;
+		opacity: 0;
+
+		svg {
+
+			position: absolute;
+			top: 6px;
+			left: 6px;
+
+		}
+
+	}
+
+	&__input[type="checkbox"]:checked ~ &__check {
+
+		opacity: 1;
+		width: 27px;
+		transition-property: width;
+
+	}
+
+/* radio */
+
+	&__input[type="radio"] ~ &__label::before {
+
+		border-radius: 50%;
+
+	}
+
+	&__input[type="radio"] ~ &__check {
+
+		width: 27px;
+		transform: scale(0);
+
+		svg {
+
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+
+		}
+
+	}
+
+	&__input[type="radio"]:checked ~ &__check {
+
+		opacity: 1;
+		transform: scale(1);
+		transition-property: transform opacity;
 
 	}
 

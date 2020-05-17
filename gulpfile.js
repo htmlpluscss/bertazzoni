@@ -136,7 +136,7 @@ gulp.task('babel', function() {
 
 gulp.task('min', function() {
 
-	return gulp.src(['src/js/min/*.js','!src/js/min/swiper.min.js','!src/js/min/inputmask.min.js'])
+	return gulp.src(['src/js/min/*.js','!src/js/min/swiper.min.js','!src/js/min/inputmask.min.js','!src/js/min/inouislider.min.js'])
 		.pipe(debug({title: 'min'}))
 		.pipe(gulpif(
 			function(file){
@@ -194,7 +194,7 @@ gulp.task('copy-js', function() {
 // big scripts
 	return gulp.src([
 		'src/js/min/swiper.min.js',
-//		'src/js/min/inputmask.min.js',
+		'src/js/min/nouislider.min.js',
 		])
 		.pipe(gulp.dest('build/js'));
 
