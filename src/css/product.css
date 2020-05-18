@@ -69,6 +69,8 @@
 			width: 100%;
 			text-align: center;
 			font: 16px/20px 'Roboto Slab';
+			color: #000;
+			transition: var(--transitionDefault);
 
 			&-ico {
 
@@ -78,6 +80,29 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+
+				svg {
+
+					fill: #000;
+					transition: var(--transitionDefault);
+
+				}
+
+			}
+
+			@media ($desktop) {
+
+				&:hover {
+
+					color: var(--text);
+
+					svg {
+
+						fill: #fff;
+
+					}
+
+				}
 
 			}
 
@@ -251,6 +276,17 @@
 			a {
 
 				color: var(--yellow);
+				transition: var(--transitionDefault);
+
+				@media ($desktop) {
+
+					&:hover {
+
+						color: var(--color);
+
+					}
+
+				}
 
 			}
 
@@ -260,6 +296,21 @@
 
 	&__favorites {
 
+		svg {
+
+			transition: var(--transitionDefault);
+
+		}
+
+		@media ($desktop) {
+
+			& .button:hover svg {
+
+				fill: var(--yellow);
+
+			}
+
+		}
 
 	}
 

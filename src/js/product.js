@@ -1,3 +1,6 @@
+
+// images
+
 ((elems)=>{
 
 	"use strict";
@@ -16,3 +19,21 @@
 				e.classList.toggle('visuallyhidden', i !== index))));
 
 })(document.querySelectorAll('.product__images-small-item'));
+
+
+
+// description
+
+((head)=>{
+
+	"use strict";
+
+	if(head.length) {
+
+		Array.prototype.forEach.call(head, (btn) =>
+			btn.addEventListener('click', () =>
+				btn.classList.toggle('is-open')));
+
+	}
+
+})(document.querySelectorAll('.description__head'));

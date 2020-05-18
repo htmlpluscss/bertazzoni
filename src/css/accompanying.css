@@ -1,6 +1,7 @@
 .accompanying {
 
 	padding: 54px 0 66px;
+	background-color: var(--color);
 
 	&__tabs {
 
