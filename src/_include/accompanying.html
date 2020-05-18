@@ -1,0 +1,103 @@
+	<aside class="accompanying">
+
+		<div class="center">
+
+			<h2 class="h1">
+				Сопутствующие товары и услуги
+			</h2>
+
+			<div class="accompanying__tabs tabs">
+
+				<div class="tabs__item">
+
+					<h3 class="tabs__btn btn btn--black-border">
+						Духовые шкафы
+					</h3>
+
+					<ul class="accompanying__list">
+
+{% for item in [1,2,3] %}
+
+						<li class="accompanying__item">
+
+{% include "products/card.html" %}
+
+						</li>
+
+{% endfor %}
+
+					</ul>
+
+				</div>
+
+				<div class="tabs__item visuallyhidden">
+
+					<h3 class="tabs__btn btn btn--black-border">
+						Аксессуары для духовых шкафов
+					</h3>
+
+					<ul class="accompanying__list">
+
+{% for item in [1,2,3,4] %}
+
+						<li class="accompanying__item">
+
+{% include "products/card.html" %}
+
+						</li>
+
+{% endfor %}
+
+					</ul>
+
+				</div>
+
+				<div class="tabs__item visuallyhidden">
+
+					<h3 class="tabs__btn btn btn--black-border">
+						Для духовых шкафов
+					</h3>
+
+					<ul class="accompanying__list">
+
+{% for item in [1,2] %}
+
+						<li class="accompanying__item">
+
+{% include "products/card.html" %}
+
+						</li>
+
+{% endfor %}
+
+					</ul>
+
+				</div>
+
+				<div class="tabs__item visuallyhidden">
+
+					<h3 class="tabs__btn btn btn--black-border">
+						Дополнительные услуги
+					</h3>
+
+					<ul class="accompanying__list">
+
+{% for item in [1,2,3,4] %}
+
+						<li class="accompanying__item">
+
+{% include "products/card.html" %}
+
+						</li>
+
+{% endfor %}
+
+					</ul>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</aside>

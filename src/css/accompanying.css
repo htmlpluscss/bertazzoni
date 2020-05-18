@@ -1,0 +1,27 @@
+.accompanying {
+
+	padding: 54px 0 66px;
+
+	&__tabs {
+
+		margin-top: 38px;
+
+	}
+
+	&__list {
+
+		display: flex;
+		justify-content: center;
+		margin: 56px -10px 0;
+
+	}
+
+	&__item {
+
+		margin: 0 10px;
+		display: flex;
+		width: calc(100% / 4 - 20px);
+
+	}
+
+}
