@@ -1,0 +1,56 @@
+{% set title = "Духовой шкаф WWV980WPS White Edition" %}
+
+{% set description = "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi u" %}
+
+{% set breadcrumbs = [
+	{
+		name : "Бытовая техника",
+		link : "categories"
+	},
+	{
+		name : "Духовые шкафы",
+		link : "products"
+	},
+	{
+		name : title,
+		link : "product"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="product">
+
+		<div class="center">
+
+			<h1 class="h1">
+				{{ title }}
+			</h1>
+
+			<div class="product__flex">
+
+				<div class="product__left">
+
+{% include "product/images.html" %}
+
+				</div>
+
+				<div class="product__right">
+
+{% include "product/param.html" %}
+{% include "product/cart.html" %}
+{% include "product/delivery.html" %}
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</article>
+
+{% include "_include/accompanying.html" %}
+
+{% endblock %}

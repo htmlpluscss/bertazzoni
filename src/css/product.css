@@ -1,0 +1,266 @@
+.product {
+
+	margin: 26px 0;
+
+	&__flex {
+
+		display: flex;
+		margin: 56px 0 46px;
+
+	}
+
+	&__left {
+
+		flex-grow: 1;
+
+	}
+
+	&__right {
+
+		width: 500px;
+		flex-shrink: 0;
+
+	}
+
+	&__images {
+
+		display: flex;
+
+		&-small {
+
+			width: 134px;
+			flex-shrink: 0;
+
+			&-item {
+
+				margin-bottom: 11px;
+				width: 134px;
+				height: 134px;
+				border: 1px solid #e6e6e6;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				transition: var(--transitionDefault);
+
+				@media ($desktop) {
+
+					&:hover {
+
+						border-color: var(--color);
+
+					}
+
+				}
+
+			}
+
+		}
+
+		&-big {
+
+			margin: 30px 60px 30px 38px;
+
+		}
+
+		&-video {
+
+			display: block;
+			width: 100%;
+			text-align: center;
+			font: 16px/20px 'Roboto Slab';
+
+			&-ico {
+
+				display: block;
+				height: 90px;
+				background-color: var(--yellow);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+			}
+
+		}
+
+		img {
+
+			max-width: 100%;
+			display: block;
+
+		}
+
+	}
+
+	&__param {
+
+		&-head {
+
+			display: flex;
+			align-items: center;
+			margin-bottom: 14px;
+
+		}
+
+		&-list {
+
+			font-size: 20px;
+			line-height: 35px;
+			color: var(--text);
+			margin: 12px 0;
+
+			li {
+
+				padding-left: 35px;
+
+				&::before {
+
+					position: absolute;
+					width: 6px;
+					height: 6px;
+					top: 14px;
+					left: 0;
+					content: '';
+					border: 2px solid var(--text);
+
+				}
+
+			}
+
+		}
+
+		&-link-all {
+
+			font-size: 20px;
+			color: var(--color);
+
+		}
+
+	}
+
+	&__color {
+
+		display: flex;
+		margin: 14px -6px;
+
+		img {
+
+			border-radius: 50%;
+			margin: 6px;
+
+		}
+
+	}
+
+	&__availability {
+
+		color: #d6d6d6;
+		font: 19px/24px 'Roboto Slab';
+		position: relative;
+		padding-left: 20px;
+
+		&.is-available {
+
+			color: var(--green);
+
+			&::before {
+
+				position: absolute;
+				width: 6px;
+				height: 6px;
+				top: 11px;
+				left: 0;
+				content: '';
+				border-radius: 50%;
+				background-color: var(--green);
+
+			}
+
+		}
+
+	}
+
+	&__label {
+
+		color: #fff;
+		padding: 0 15px;
+		font: 15px/33px 'Roboto Slab';
+		background-color: #000;
+		margin-right: 26px;
+
+	}
+
+	&__sku {
+
+		font-size: 19px;
+
+	}
+
+	&__cart {
+
+		display: flex;
+		margin: 12px 0;
+
+	}
+
+	&__price {
+
+		font: 700 40px/50px 'Roboto Slab';
+		padding-right: 30px;
+		white-space: nowrap;
+
+	}
+
+	&__delivery {
+
+		margin: 24px 0;
+
+		&-row {
+
+			display: flex;
+			align-items: center;
+
+		}
+
+		&-img {
+
+			width: 362px;
+			height: 75px;
+			border: 1px solid #dfdfdf;
+			display: flex;
+			align-items: center;
+			font: 18px/24px 'Roboto Slab';
+			margin-right: 38px;
+
+			svg {
+
+				flex-shrink: 0;
+				margin: 0 26px;
+
+			}
+
+		}
+
+		&-detals {
+
+			font-size: 13px;
+			line-height: 18px;
+			margin-top: 15px;
+			max-width: 358px;
+
+			a {
+
+				color: var(--yellow);
+
+			}
+
+		}
+
+	}
+
+	&__favorites {
+
+
+	}
+
+}
