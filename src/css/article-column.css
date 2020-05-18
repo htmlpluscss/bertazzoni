@@ -1,0 +1,43 @@
+.article-column {
+
+	display: flex;
+	justify-content: space-between;
+
+	&__box {
+
+		width: 646px;
+		font-size: 20px;
+		line-height: 30px;
+		color: var(--text);
+
+	}
+
+	&__item {
+
+		margin: 64px 0;
+
+	}
+
+	.h3 {
+
+		color: var(--color);
+		display: block;
+		margin-bottom: 16px;
+
+	}
+
+	img {
+
+		display: block;
+		margin-bottom: 26px;
+
+	}
+
+	figcaption {
+
+		max-width: 626px;
+		margin-bottom: 26px;
+
+	}
+
+}
