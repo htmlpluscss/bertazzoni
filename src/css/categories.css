@@ -43,6 +43,7 @@
 		&__img {
 
 			display: block;
+			border-bottom: 1px solid #fff;
 
 		}
 
@@ -52,22 +53,84 @@
 			text-align: center;
 			font-size: 25px;
 			line-height: 34px;
-			height: 61px;
-			border-top: 1px solid #fff;
+			font-weight: 400;
+			height: 60px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			color: var(--color);
 			transition: var(--transitionDefault);
 
+			.btn-plus {
+
+				position: relative;
+				margin-left: 10px;
+				background-color: transparent;
+				width: 35px;
+				height: 35px;
+
+			}
+
 		}
 
-		@media ($desktop) {
+		&__hover {
 
-			&:hover &__name {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: var(--yellow);
+			opacity: 0;
+			transition: var(--transitionDefault);
+			padding: 10px 36px;
 
-				color: #fff;
-				background-color: var(--yellow-hover);
+		}
+
+		&__sub {
+
+			font: 17px/35px 'Roboto Slab';
+			margin: 5px 0;
+
+			a {
+
+				color: #000;
+				transition: var(--transitionDefault);
+
+				@media ($desktop) {
+
+					&:hover {
+
+						color: var(--text);
+
+					}
+
+				}
+
+			}
+
+		}
+
+		&:hover &__hover {
+
+			opacity: 1;
+
+		}
+
+		&__link {
+
+			left: 36px;
+			right: 36px;
+			bottom: 28px;
+			position: absolute;
+
+			.btn {
+
+				height: 44px;
+				line-height: 44px;
+				font-size: 15px;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				width: 100%;
 
 			}
 

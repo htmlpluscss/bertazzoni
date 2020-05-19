@@ -275,7 +275,7 @@
 
 			a {
 
-				color: var(--yellow);
+				color: var(--brown);
 				transition: var(--transitionDefault);
 
 				@media ($desktop) {

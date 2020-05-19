@@ -67,76 +67,18 @@
 		width: 100%;
 		transition: var(--transitionDefault);
 
-		&::after {
+		.btn-plus {
 
-			position: absolute;
-			width: 33px;
-			height: 33px;
-			top: 0;
-			left: calc(100% - 50px);
-			right: 0;
-			bottom: 0;
-			content: '';
-			margin: auto;
-			border-radius: 50%;
-			border: 1px solid #000;
-
-		}
-
-		&-btn {
-
-			position: absolute;
-			width: 50px;
 			top: 0;
 			right: 0;
+			height: auto;
 			bottom: 0;
-			background-color: var(--yellow);
-
-			&::after,
-			&::before {
-
-				position: absolute;
-				width: 1px;
-				height: 17px;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				content: '';
-				margin: auto;
-				background-color: #000;
-				transition: var(--transitionDefault);
-
-			}
-
-			&::before {
-
-				height: 1px;
-				width: 17px;
-
-			}
 
 		}
 
 		&.is-open {
 
 			color: var(--color);
-
-		}
-
-		&.is-open &-btn {
-
-			&::after {
-
-				transform: scale(0);
-
-			}
-
-			&::before {
-
-				transform: scale(.6);
-
-			}
 
 		}
 

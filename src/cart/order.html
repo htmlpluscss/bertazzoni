@@ -1,0 +1,445 @@
+		<form action="/order/" novalidate="novalidate" class="cart-order" data-redirect="/done/">
+
+			<input type="hidden" name="save_before_order" value="123456789">
+
+			<h2 class="cart__head">
+				Шаг 2. <span>Выберите вариант доставки</span>
+			</h2>
+
+			<div class="cart-order__delivery">
+
+				<label class="checkbox">
+
+					<input type="radio" class="checkbox__input toggle-delivery" data-delivery="address" value="Доставка товара" name="delivery" checked="checked">
+
+					<span class="checkbox__label">
+						Доставка товара
+					</span>
+
+					<span class="checkbox__check">
+
+						<svg width="13" height="13" viewBox="0 0 10 10">
+							<circle cx="5" cy="5" r="5"/>
+						</svg>
+
+					</span>
+
+				</label>
+
+				<label class="checkbox">
+
+					<input type="radio" class="checkbox__input toggle-delivery" data-delivery="warehouse" value="Самовывоз" name="delivery">
+
+					<span class="checkbox__label">
+						Самовывоз
+					</span>
+
+					<span class="checkbox__check">
+
+						<svg width="13" height="13" viewBox="0 0 10 10">
+							<circle cx="5" cy="5" r="5"/>
+						</svg>
+
+					</span>
+
+				</label>
+
+			</div>
+
+			<h2 class="cart__head">
+				Шаг 3. <span>Оформление доставки</span>
+			</h2>
+
+			<h3 class="h2">
+				Доставка товара
+			</h3>
+
+			<p class="cart-order__text">
+				Уже покупали у нас? <a href="/">Авторизуйтесь</a>
+			</p>
+
+			<div class="cart-order__input">
+
+				<label class="input-label">
+
+					<input class="input-label__input input" required="required" type="email" name="email">
+
+					<span class="input-label__label">
+						E-mail
+					</span>
+
+				</label>
+
+			</div>
+
+			<div class="cart-order__input">
+
+				<label class="input-label">
+
+					<input class="input-label__input input" required="required" name="firstname">
+
+					<span class="input-label__label">
+						Имя
+					</span>
+
+				</label>
+
+			</div>
+
+			<div class="cart-order__input">
+
+				<label class="input-label">
+
+					<input class="input-label__input input" required="required" name="lastname">
+
+					<span class="input-label__label">
+						Фамилия
+					</span>
+
+				</label>
+
+			</div>
+
+			<div class="cart-order__input">
+
+				<label class="input-label">
+
+					<input class="input-label__input input" required="required" type="tel" name="phone">
+
+					<span class="input-label__label">
+						Телефон
+					</span>
+
+				</label>
+
+			</div>
+
+			<div class="cart-order__input toggle-delivery-address">
+
+				<label class="input-label">
+
+					<input class="input-label__input input" required="required" name="address">
+
+					<span class="input-label__label">
+						Адрес доставки
+					</span>
+
+				</label>
+
+			</div>
+
+			<div class="cart-order__input toggle-delivery-address">
+
+				<label class="input-label">
+
+					<input class="input-label__input input" required="required" name="date">
+
+					<span class="input-label__label">
+						Дата доставки
+					</span>
+
+				</label>
+
+			</div>
+
+			<div class="cart-order__input cart-order__input--flex toggle-delivery-warehouse hide">
+
+				<div class="cart-order__input-label">
+					Пункт <br>самовывоза
+				</div>
+
+				<div class="cart-order__input-control">
+
+					<label class="checkbox">
+
+						<input class="checkbox__input input" type="radio" name="warehouse" value="1" required="required" data-errors="warehouse">
+
+						<span class="checkbox__label">
+							<span class="cart-order__warehouse">
+								<span class="cart-order__warehouse-city">Москва</span>
+								<span class="cart-order__warehouse-address">Пятницкое шоссе д. 18, пв. 270</span>
+								<span class="cart-order__warehouse-time">часы работы: Пн-Пт, с 10-00 до 18-00</span>
+							</span>
+						</span>
+
+						<span class="checkbox__check">
+
+							<svg width="13" height="13" viewBox="0 0 10 10">
+								<circle cx="5" cy="5" r="5"/>
+							</svg>
+
+						</span>
+
+					</label>
+
+					<label class="checkbox">
+
+						<input class="checkbox__input input" type="radio" name="warehouse" value="2" required="required" data-errors="warehouse">
+
+						<span class="checkbox__label">
+							<span class="cart-order__warehouse">
+								<span class="cart-order__warehouse-city">Москва</span>
+								<span class="cart-order__warehouse-address">Пятницкое шоссе д. 18, пв. 270</span>
+								<span class="cart-order__warehouse-time">часы работы: Пн-Пт, с 10-00 до 18-00</span>
+							</span>
+						</span>
+
+						<span class="checkbox__check">
+
+							<svg width="13" height="13" viewBox="0 0 10 10">
+								<circle cx="5" cy="5" r="5"/>
+							</svg>
+
+						</span>
+
+					</label>
+
+					<label class="checkbox">
+
+						<input class="checkbox__input input" type="radio" name="warehouse" value="3" required="required" data-errors="warehouse">
+
+						<span class="checkbox__label">
+							<span class="cart-order__warehouse">
+								<span class="cart-order__warehouse-city">Москва</span>
+								<span class="cart-order__warehouse-address">Пятницкое шоссе д. 18, пв. 270</span>
+								<span class="cart-order__warehouse-time">часы работы: Пн-Пт, с 10-00 до 18-00</span>
+							</span>
+						</span>
+
+						<span class="checkbox__check">
+
+							<svg width="13" height="13" viewBox="0 0 10 10">
+								<circle cx="5" cy="5" r="5"/>
+							</svg>
+
+						</span>
+
+					</label>
+
+				</div>
+
+			</div>
+
+			<div class="cart-order__input cart-order__input--flex">
+
+				<div class="cart-order__input-label">
+					Способ оплаты
+				</div>
+
+				<div class="cart-order__input-control">
+
+					<label class="checkbox">
+
+						<input class="checkbox__input" type="radio" name="paymend" value="Наличными" checked="checked">
+
+						<span class="checkbox__label">
+							Наличными
+						</span>
+
+						<span class="checkbox__check">
+
+							<svg width="13" height="13" viewBox="0 0 10 10">
+								<circle cx="5" cy="5" r="5"/>
+							</svg>
+
+						</span>
+
+					</label>
+
+					<label class="checkbox toggle-delivery-address">
+
+						<input class="checkbox__input" type="radio" name="paymend" value="Банковской картой">
+
+						<span class="checkbox__label">
+							Банковской картой
+						</span>
+
+						<span class="checkbox__check">
+
+							<svg width="13" height="13" viewBox="0 0 10 10">
+								<circle cx="5" cy="5" r="5"/>
+							</svg>
+
+						</span>
+
+					</label>
+
+					<label class="checkbox">
+
+						<input class="checkbox__input" type="radio" name="paymend" value="Безналичный расчет">
+
+						<span class="checkbox__label">
+							Безналичный расчет
+						</span>
+
+						<span class="checkbox__check">
+
+							<svg width="13" height="13" viewBox="0 0 10 10">
+								<circle cx="5" cy="5" r="5"/>
+							</svg>
+
+						</span>
+
+					</label>
+
+					<label class="checkbox">
+
+						<input class="checkbox__input" type="radio" name="paymend" value="on-line (картой)">
+
+						<span class="checkbox__label">
+							on-line (картой)
+						</span>
+
+						<span class="checkbox__check">
+
+							<svg width="13" height="13" viewBox="0 0 10 10">
+								<circle cx="5" cy="5" r="5"/>
+							</svg>
+
+						</span>
+
+					</label>
+
+				</div>
+
+			</div>
+
+			<div class="cart-order__input cart-order__input--flex toggle-delivery-address">
+
+				<div class="cart-order__input-label">
+					Лифт
+				</div>
+
+				<div class="cart-order__input-control">
+
+					<label class="checkbox">
+
+						<input class="checkbox__input input" type="radio" name="lift" value="Нет" checked="checked">
+
+						<span class="checkbox__label">
+							Нет
+						</span>
+
+						<span class="checkbox__check">
+
+							<svg width="13" height="13" viewBox="0 0 10 10">
+								<circle cx="5" cy="5" r="5"/>
+							</svg>
+
+						</span>
+
+					</label>
+
+					<label class="checkbox">
+
+						<input class="checkbox__input input" type="radio" name="lift" value="Грузовой">
+
+						<span class="checkbox__label">
+							Грузовой
+						</span>
+
+						<span class="checkbox__check">
+
+							<svg width="13" height="13" viewBox="0 0 10 10">
+								<circle cx="5" cy="5" r="5"/>
+							</svg>
+
+						</span>
+
+					</label>
+
+					<label class="checkbox">
+
+						<input class="checkbox__input input" type="radio" name="lift" value="Пассажирский">
+
+						<span class="checkbox__label">
+							Пассажирский
+						</span>
+
+						<span class="checkbox__check">
+
+							<svg width="13" height="13" viewBox="0 0 10 10">
+								<circle cx="5" cy="5" r="5"/>
+							</svg>
+
+						</span>
+
+					</label>
+
+				</div>
+
+			</div>
+
+			<div class="cart-order__input toggle-delivery-address">
+
+				<div class="select">
+
+{% include "cart/metro.html" %}
+
+				</div>
+
+			</div>
+
+			<div class="cart-order__input">
+
+				<label class="input-label">
+
+					<textarea class="input-label__input input" name="memo"></textarea>
+
+					<span class="input-label__label">
+						Дополнительная информация
+					</span>
+
+				</label>
+
+			</div>
+
+			<label class="checkbox cart-order__rules">
+
+				<input type="checkbox" class="checkbox__input" required="required" data-errors="rules">
+
+				<span class="checkbox__label">
+					Я согласен на обработку и хранение моих персональных данных
+				</span>
+
+				<span class="checkbox__check">
+
+					<svg width="18" height="15" viewBox="0 0 12 10">
+						<path d="M4.9736 6.4856L9.6327-.0371l1.6275 1.1625L5.331 9.4261.7956 5.5387l1.3016-1.5185z"/>
+					</svg>
+
+				</span>
+
+			</label>
+
+			<p class="cart-order__info-registr">
+				Вы будете зарегистрированны на сайте и в дальнейшем сможете экономить время при повторных покупках, отслеживать статус заказа, получать персональные предложения.
+			</p>
+
+			<div class="cart-order__text-error"></div>
+
+			<button class="btn cart-order__submit">
+				Оформить заказ
+			</button>
+
+			<p class="cart-order__info-required">
+				<sup>*</sup> - поля обязательны для заполнения
+			</p>
+
+			<script>
+
+				window.CartFormOrder = {
+
+					errors : {
+
+						rules     : "Для оформления заказа необходимо дать согласие на обработку и хранение персональных данных",
+						warehouse : "Укажите Пункт самовывоза",
+						required  : "Заполните все обязательные поля"
+
+					}
+
+				};
+
+			</script>
+
+		</form>

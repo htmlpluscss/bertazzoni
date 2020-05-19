@@ -30,8 +30,8 @@ body {
 	overflow-y: scroll;
 	position: relative;
 
-/* background-image: url(/css/product.png); */
-background-position: center -21px;
+/* background-image: url(/css/cart.png); */
+background-position: center 0px;
 
 	/* IE10+ CSS styles go here */
 	@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -96,6 +96,70 @@ table {
 
 	border: 0;
 	border-collapse: collapse;
+
+}
+
+.btn-plus {
+
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: var(--yellow);
+
+	i {
+
+		position: absolute;
+		width: 33px;
+		height: 33px;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		border-radius: 50%;
+		border: 1px solid #000;
+
+	}
+
+	&::after,
+	&::before {
+
+		position: absolute;
+		width: 1px;
+		height: 17px;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		content: '';
+		margin: auto;
+		background-color: #000;
+		transition: var(--transitionDefault);
+
+	}
+
+	&::before {
+
+		height: 1px;
+		width: 17px;
+
+	}
+
+	.is-open > & {
+
+		&::after {
+
+			transform: scale(0);
+
+		}
+
+		&::before {
+
+			transform: scale(.6);
+
+		}
+
+	}
 
 }
 

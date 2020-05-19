@@ -76,6 +76,24 @@
 
 	}
 
+	&--white {
+
+		color: var(--color);
+		background-color: #fff;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: #fff;
+				background-color: var(--color);
+
+			}
+
+		}
+
+	}
+
 	&--outline {
 
 		background-color: #fff;
@@ -140,7 +158,7 @@
 		resize: none;
 		height: 192px;
 		overflow: auto;
-		padding: 8px 15px;
+		padding: 20px 23px;
 
 	}
 
@@ -246,7 +264,7 @@
 	&__input[required] ~ &__label::after {
 
 		content: '*';
-		color: #d6a700;
+		color: var(--brown);
 
 	}
 
@@ -254,7 +272,7 @@
 	&--no-empty &__label {
 
 		top: 0 !important;
-		font-size: 13px;
+		font-size: 13px !important;
 		color: var(--color);
 
 		&::after {
@@ -426,9 +444,15 @@
 
 	}
 
-	&--error &__label::before {
+	&--error &__label {
 
-		background-color: color(var(--error) a(25%));
+		color: var(--error) !important;
+
+		&::before {
+
+			border-color: var(--error) !important;
+
+		}
 
 	}
 

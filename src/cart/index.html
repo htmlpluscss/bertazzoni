@@ -1,0 +1,37 @@
+{% set title = "Оформление заказа" %}
+{% set description = "Оформление заказа" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="cart">
+
+		<div class="center">
+
+			<h1 class="h1">
+				Корзина
+			</h1>
+
+			<div class="cart__flex">
+
+				<div class="cart__left">
+
+{% include "cart/left.html" %}
+
+				</div>
+
+				<div class="cart__right">
+
+{% include "cart/list.html" %}
+{% include "cart/order.html" %}
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</article>
+
+{% endblock %}

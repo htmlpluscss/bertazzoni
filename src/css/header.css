@@ -8,6 +8,13 @@
 	padding: 22px 0;
 	background-color: color(#0b0b0b a(50%));
 
+	.center {
+
+		width: 100%;
+		padding: 0 30px;
+
+	}
+
 	@media ($lgWidth) {
 
 	}

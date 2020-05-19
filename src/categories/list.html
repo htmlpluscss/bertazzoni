@@ -1,51 +1,23 @@
 {% set list = [
 	{
 		img  : "1",
-		name : "Cooking"
+		name : "Готовка",
+		sub  : ["варочные панели", "духовые шкафы", "микроволновые печи", "плиты", "аксессуары"]
 	},
 	{
 		img  : "2",
-		name : "Refrigeration"
+		name : "Охлаждение",
+		sub  : ["холодильники", "морозильники", "винные шкафы"]
 	},
 	{
 		img  : "3",
-		name : "Ventilation"
+		name : "Вентиляция",
+		sub  : ["островные", "втроенные", "потолочные"]
 	},
 	{
 		img  : "4",
-		name : "Dishwasher"
-	},
-	{
-		img  : "1",
-		name : "Cooking"
-	},
-	{
-		img  : "2",
-		name : "Refrigeration"
-	},
-	{
-		img  : "3",
-		name : "Ventilation"
-	},
-	{
-		img  : "4",
-		name : "Dishwasher"
-	},
-	{
-		img  : "1",
-		name : "Cooking"
-	},
-	{
-		img  : "2",
-		name : "Refrigeration"
-	},
-	{
-		img  : "3",
-		name : "Ventilation"
-	},
-	{
-		img  : "4",
-		name : "Dishwasher"
+		name : "Посудомойки",
+		sub  : ["встраиваемые","отдельностояще"]
 	}
 ] %}
 
@@ -55,7 +27,7 @@
 
 			<li class="categories__item">
 
-				<a href="/" class="categories-card">
+				<div class="categories-card">
 
 					<figure class="categories-card__inner">
 
@@ -70,11 +42,41 @@
 
 						<figcaption class="categories-card__name">
 							{{ item.name }}
+							<span class="btn-plus"><i></i></span>
 						</figcaption>
 
 					</figure>
 
-				</a>
+					<div class="categories-card__hover">
+
+						<h3 class="categories-card__name is-open">
+							{{ item.name }}
+							<span class="btn-plus"><i></i></span>
+						</h3>
+
+						<ul class="categories-card__sub">
+
+{% for sub in item.sub %}
+
+							<li>
+								<a href="/">{{ sub }}</a>
+							</li>
+
+{% endfor %}
+
+						</ul>
+
+						<div class="categories-card__link">
+
+							<a href="/" class="btn btn--white">
+								В раздел
+							</a>
+
+						</div>
+
+					</div>
+
+				</div>
 
 			</li>
 

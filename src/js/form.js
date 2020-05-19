@@ -141,29 +141,6 @@
 				}
 
 			}
-			else {
-
-				var inputError = form.querySelector('.input--error');
-
-				if(!BERTAZZONI.isInViewport(inputError)){
-
-					var top = window.pageYOffset + inputError.getBoundingClientRect().top - inputError.clientHeight;
-
-					window.scrollTo(0, top);
-
-				}
-
-				if(inputError){
-
-					setTimeout(function(){
-
-						inputError.focus();
-
-					},2000);
-
-				}
-
-			}
 
 		});
 
@@ -188,9 +165,7 @@
 
 // checked
 
-/*
-
-	var checkbox = document.querySelectorAll('.checkbox[required]');
+	var checkbox = document.querySelectorAll('.checkbox');
 
 	Array.prototype.forEach.call(checkbox, (el) => {
 
@@ -208,6 +183,6 @@
 
 	});
 
-*/
+
 
 })(document.querySelectorAll('.form'));

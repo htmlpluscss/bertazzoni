@@ -212,16 +212,16 @@ gulp.task('copy', function() {
 
 gulp.task('ftp', function () {
 
-//	if(!config) {
+	if(!config) {
 
 		return true;
 
-//	}
+	}
 
 	const f = filter('**/*.html', {restore: true});
 
-	return gulp.src('build/**/*.{css,html,js}', {since: gulp.lastRun('ftp')})
-//	return gulp.src('build/**/*', {since: gulp.lastRun('ftp')})
+//	return gulp.src('build/**/*.{css,html,js}', {since: gulp.lastRun('ftp')})
+	return gulp.src('build/**/*', {since: gulp.lastRun('ftp')})
 		.pipe(debug({title: 'ftp:'}))
 		.pipe(f)
 		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))

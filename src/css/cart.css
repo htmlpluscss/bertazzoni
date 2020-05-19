@@ -1,0 +1,546 @@
+.cart  {
+
+	padding: 133px 0;
+
+	&__flex {
+
+		display: flex;
+		margin-top: 42px;
+
+	}
+
+	&__left {
+
+		width: 324px;
+		margin-right: 16px;
+		flex-shrink: 0;
+
+	}
+
+	&__right {
+
+		flex-grow: 1;
+
+	}
+
+	&__head {
+
+		font: 28px/42px 'Roboto Slab';
+		margin-bottom: 24px;
+		color: var(--text);
+
+		span {
+
+			margin-left: 8px;
+
+		}
+
+	}
+
+	.quantity {
+
+		width: 58px;
+		position: relative;
+		display: block;
+
+		&__count {
+
+			text-align: center;
+			line-height: 30px;
+			height: 30px;
+			color: var(--text);
+			font-size: 18px;
+			border: 0;
+
+		}
+
+		&__btn {
+
+			position: absolute;
+			left: 0;
+			width: 20px;
+			top: 0;
+			bottom: 0;
+			font-size: 18px;
+			color: transparent;
+			z-index: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: var(--text);
+
+			&:hover {
+
+				color: var(--color);
+
+			}
+
+			&--up {
+
+				left: auto;
+				right: 0;
+
+			}
+
+		}
+
+	}
+
+	&__item {
+
+		&--remove {
+
+			transform: scaleY(0);
+			transition: var(--transitionDefault);
+			opacity: 0;
+
+		}
+
+		td {
+
+			border-top: 1px solid #e2e0e0;
+			border-bottom: 1px solid #e2e0e0;
+			padding: 35px 0 35px 22px;
+
+			&:first-child {
+
+				border-left: 1px solid #e2e0e0;
+
+			}
+
+			&:last-child {
+
+				border-right: 1px solid #e2e0e0;
+
+			}
+
+		}
+
+		&-shipping {
+
+			color: var(--text);
+			font-size: 18px;
+
+		}
+
+		&-price {
+
+			font: 700 20px/26px 'Roboto Slab';
+			white-space: nowrap;
+
+		}
+
+	}
+
+	&-card {
+
+		display: flex;
+
+		&__img {
+
+			width: 100px;
+
+		}
+
+		&__text {
+
+			padding-left: 38px;
+
+		}
+
+		&__cat {
+
+			font-size: 15px;
+			line-height: 22px;
+			margin-bottom: 8px;
+			color: var(--text);
+
+		}
+
+		&__name {
+
+			font: 18px/24px 'Roboto Slab';
+			margin-bottom: 10px;
+
+		}
+
+		&__availability {
+
+			color: #d6d6d6;
+			font: 15px/20px 'Roboto Slab';
+			position: relative;
+			padding-left: 10px;
+
+			&.is-available {
+
+				color: var(--green);
+
+				&::before {
+
+					position: absolute;
+					width: 4px;
+					height: 4px;
+					top: 10px;
+					left: 0;
+					content: '';
+					border-radius: 50%;
+					background-color: var(--green);
+
+				}
+
+			}
+
+		}
+
+	}
+
+/* left  */
+
+	&-bar {
+
+		position: sticky;
+		top: 100px;
+
+	}
+
+	&-shipping {
+
+		height: 142px;
+		position: relative;
+		padding: 26px 20px 0 123px;
+		border: 1px solid #dfdfdf;
+		font: 20px/26px 'Roboto Slab';
+		margin-bottom: 24px;
+
+		b {
+
+			display: block;
+			margin-top: 8px;
+
+		}
+
+		svg {
+
+			position: absolute;
+			top: 40px;
+			left: 40px;
+
+		}
+
+	}
+
+	&-result {
+
+		background-color: var(--yellow);
+		padding: 28px 15px 18px;
+
+		&__total {
+
+			display: flex;
+			justify-content: space-between;
+			font: 20px/26px 'Roboto Slab';
+			margin-bottom: 26px;
+
+			&-value {
+
+				font-weight: 700;
+
+			}
+
+		}
+
+		&__nds {
+
+			display: flex;
+			justify-content: space-between;
+			font-size: 16px;
+			line-height: 24px;
+			margin-bottom: 20px;
+
+		}
+
+		&__note {
+
+			font-size: 15px;
+			line-height: 20px;
+			margin: 20px 4px;
+
+		}
+
+	}
+
+/* list  */
+
+	&-list {
+
+		table {
+
+			width: 100%;
+			margin: 75px 0 57px;
+			border-collapse: separate;
+			border-spacing: 0 14px;
+
+		}
+
+		thead {
+
+			th {
+
+				text-align: left;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 25px;
+				vertical-align: middle;
+				padding: 0 0 0 22px;
+				white-space: nowrap;
+
+				&:first-child {
+
+					padding-left: 40px;
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&__col {
+
+		&-2 {
+
+			width: 154px;
+
+		}
+
+		&-3 {
+
+			width: 98px;
+
+		}
+
+		&-4 {
+
+			width: 112px;
+
+		}
+
+		&-5 {
+
+			width: 126px;
+
+		}
+
+		&-6 {
+
+			width: 78px;
+			padding: 0 !important;
+			text-align: center;
+
+		}
+
+	}
+
+
+/* form  */
+
+
+	&-order {
+
+		max-width: 555px;
+
+		&__delivery {
+
+			display: flex;
+			margin: 42px 0 76px;
+
+			.checkbox + .checkbox {
+
+				margin-left: 90px;
+
+			}
+
+		}
+
+		.h2 {
+
+			text-align: left;
+			margin: 46px 0 6px;
+
+		}
+
+		&__text {
+
+			font-size: 13px;
+			line-height: 18px;
+			margin-bottom: 44px;
+
+			a {
+
+				color: var(--brown);
+				transition: var(--transitionDefault);
+
+				@media ($desktop) {
+
+					&:hover {
+
+						color: var(--color);
+
+					}
+
+				}
+
+			}
+
+		}
+
+		&__input {
+
+			margin: 20px 0;
+
+			&--flex {
+
+				display: flex;
+				margin: 30px 0;
+
+			}
+
+			&-label {
+
+				font-size: 20px;
+				line-height: 27px;
+				color: var(--text);
+				padding-left: 25px;
+				width: 206px;
+
+			}
+
+			&-control {
+
+				.checkbox {
+
+					margin-top: 13px;
+
+					&:first-child {
+
+						margin-top: 5px;
+
+					}
+
+				}
+
+			}
+
+			.input-label__label {
+
+				font-size: 20px;
+
+			}
+
+		}
+
+		.checkbox {
+
+			font-size: 20px;
+
+			&__label {
+
+				color: var(--color);
+
+				&::before {
+
+					border-color: #dcdcdc;
+					background-color: #fff;
+
+				}
+
+			}
+
+			&__check svg {
+
+				fill: var(--brown);
+
+			}
+
+		}
+
+		&__rules {
+
+			margin-top: 30px;
+
+			.checkbox__label {
+
+				font-size: 13px;
+
+			}
+
+
+		}
+
+		&__info-registr {
+
+			font-size: 13px;
+			line-height: 18px;
+			color: #787878;
+			margin: 26px 0;
+
+		}
+
+		&__info-required {
+
+			font-size: 13px;
+			line-height: 18px;
+
+			sup {
+
+				color: var(--brown);
+
+			}
+
+		}
+
+		&__submit {
+
+			margin: 30px auto 26px;
+			display: block;
+
+		}
+
+		&__warehouse {
+
+			&-city {
+
+				display: block;
+				font-size: 20px;
+				color: var(--brown);
+
+			}
+
+			&-addrewss {
+
+				font-size: 18px;
+				display: block;
+
+			}
+
+			&-time {
+
+				font-size: 13px;
+				display: block;
+
+			}
+
+		}
+
+		&__text-error {
+
+			font-size: 14px;
+			color: var(--error);
+			text-align: center;
+
+		}
+
+	}
+
+}
