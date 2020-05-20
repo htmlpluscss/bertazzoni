@@ -140,7 +140,7 @@
 		justify-content: space-between;
 
 		position: absolute;
-		top: 16px;
+		top: 0;
 		left: 30px;
 		right: 30px;
 		pointer-events: none;

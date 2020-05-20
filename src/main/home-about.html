@@ -2,26 +2,58 @@
 
 		<div class="center">
 
-			<picture>
+			<h2 class="h1">
+				О компании
+			</h2>
 
-				<source srcset="/img/main/top/320x182.webp 1x, /img/main/top/640x364.webp 2x" type="image/webp" media="(max-width: 320px)">
-				<source srcset="/img/main/top/320x182.jpg 1x, /img/main/top/640x364.jpg 2x" media="(max-width: 320px)">
+			<div class="home-about__box">
 
-				<source srcset="/img/main/top/360x204.webp 1x, /img/main/top/720x408.webp 2x" type="image/webp" media="(max-width: 360px)">
-				<source srcset="/img/main/top/360x204.jpg 1x, /img/main/top/720x408.jpg 2x" media="(max-width: 360px)">
+				<div class="home-about__left">
 
-				<source srcset="/img/main/top/428x242.webp 1x, /img/main/top/856x484.webp 2x" type="image/webp" media="(max-width: 428px)">
-				<source srcset="/img/main/top/428x242.jpg 1x, /img/main/top/856x484.jpg 2x" media="(max-width: 428px)">
+					<h3 class="h1">
+						Labore et dolore magna aliqua
+					</h3>
 
-				<source srcset="/img/main/top/768x436.webp 1x, /img/main/top/1536x872.webp 2x" type="image/webp" media="(max-width: 768px)">
-				<source srcset="/img/main/top/768x436.jpg 1x, /img/main/top/1536x872.jpg 2x" media="(max-width: 768px)">
+					<p>
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.
+					</p>
 
-				<source srcset="/img/main/top/1280x720.webp 1x, /img/main/top/2560x1440.webp 2x" type="image/webp">
-				<source srcset="/img/main/top/1280x720.jpg 1x, /img/main/top/2560x1440.jpg 2x">
+					<a href="/" class="btn">
+						Подробнее
+					</a>
 
-				<img class="top-img__picture" src="/img/main/top/1280x720.jpg" alt="" loading="lazy" width="1280" height="720">
+				</div>
 
-			</picture>
+				<div class="home-about__right">
+
+					<ul>
+
+{% for item in [
+	"Признанное качество Miele. Уже более 100  лет",
+	"Уникальные иновационные разработки и технологии",
+	"Безупречный и бережный уход за вашим домом",
+	"Идеальный дизайн для любого интерьера",
+	"Заслуженно лучшее сервисное обслуживание"
+] %}
+
+						<li class="home-about__item">
+
+							<div class="home-about__ico">
+
+
+							</div>
+
+							{{ item }}
+
+						</li>
+
+{% endfor %}
+
+					</ul>
+
+				</div>
+
+			</div>
 
 		</div>
 
