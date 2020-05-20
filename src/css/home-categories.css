@@ -1,0 +1,31 @@
+.home-categories {
+
+	.center {
+
+		padding: 60px 0;
+		color: #fff;
+		background-color: var(--black);
+		background-position: top right;
+		background-repeat: no-repeat;
+		background-image: url(/img/categories/bg.png);
+
+	}
+
+	&__intro {
+
+		text-align: center;
+		font-style: italic;
+		font-size: 15px;
+		line-height: 22px;
+		margin-bottom: 24px;
+
+	}
+
+	.categories__list {
+
+		margin-bottom: 0;
+
+	}
+
+}
+
