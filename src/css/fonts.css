@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Annabelle';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/annabelle-webfont.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Annabelle2';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/annabelle.woff2') format('woff2');
+}
+
 /* roboto-slab-300 - latin_cyrillic-ext */
 @font-face {
   font-family: 'Roboto Slab';

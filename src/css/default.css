@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-/* color: red !important; */
+color: red !important;
 }
 
 html {
@@ -30,7 +30,7 @@ body {
 	overflow-y: scroll;
 	position: relative;
 
-/* background-image: url(/css/cart.png); */
+background-image: url(/css/home.png);
 background-position: center 0px;
 
 	/* IE10+ CSS styles go here */
