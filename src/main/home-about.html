@@ -24,32 +24,44 @@
 
 				</div>
 
-				<div class="home-about__right">
+				<div class="home-about__right swiper-container-style">
 
-					<ul>
+					<div class="home-about__dashboard">
 
-{% for item in [
-	"Признанное качество Miele. Уже более 100  лет",
-	"Уникальные иновационные разработки и технологии",
-	"Безупречный и бережный уход за вашим домом",
-	"Идеальный дизайн для любого интерьера",
-	"Заслуженно лучшее сервисное обслуживание"
-] %}
+						<h3 class="home-about__dashboard-head">
+							Quis nostrud exercitation ullamco
+						</h3>
 
-						<li class="home-about__item">
+						<p class="home-about__dashboard-text">
+							Ut enim ad minim veniam, quis nostrud
+						</p>
 
-							<div class="home-about__ico">
+					</div>
 
+					<div class="swiper-container swiper-container--home-about">
 
-							</div>
+						<ul class="home-about__list swiper-wrapper">
 
-							{{ item }}
+{% for item in [1,2,3] %}
 
-						</li>
+							<li class="home-about__item swiper-slide">
+
+								<picture>
+
+									<source srcset="/img/main/about/{{ item }}--350x232.webp 1x, /img/main/about/{{ item }}--700x464.webp 2x" type="image/webp">
+									<source srcset="/img/main/about/{{ item }}--350x232.jpg 1x, /img/main/about/{{ item }}--700x464.jpg 2x">
+
+									<img class="home-about__img" src="/img/main/about/{{ item }}--350x232.jpg" alt="" loading="lazy" width="350" height="232">
+
+								</picture>
+
+							</li>
 
 {% endfor %}
 
-					</ul>
+						</ul>
+
+					</div>
 
 				</div>
 
