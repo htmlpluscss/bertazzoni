@@ -1,128 +1,107 @@
-	<section class="home-readme review-column">
-
-		<div class="review__title">
-
-			<h2 class="head">
-				Что говорят пациенты
-			</h2>
-
-		</div>
-
-		<hr>
+	<div class="home-readme">
 
 		<div class="center">
 
-			<div class="review-column__wrap">
+			<div class="home-readme__column">
 
-				<ul class="review-column__list">
+				<div class="home-readme__left">
 
-{% set list = [
-	{
-		name: "Лариса",
-		service: "Увеличение груди",
-		intro: "Для меня в работе очень важно две вещи: отношение и результат.  В этом смысле на 100% это удалось моему хирургу. Я получила очень чуткие, добрые и профессиональные советы и потрясающую грудочку!!",
-		text: "Владислава Владиславовна - хирург с золотыми руками с ангельским личиком! Я так хочу Вас поблагодарить за результат моей операции! Очень жалко, что не сразу попала к Вам, а пришла переделывать"
-	},
-	{
-		name: "Светлана",
-		service: "Пластика живота",
-		intro: "С самого начала мне очень понравился подход Владиславы Владиславовны, ее отношение к проблеме! После родов у меня образовался кожно жировой фартук, конечно я пробовала худеть, ходить на фитнес,",
-		text: "Для меня в работе очень важно две вещи: отношение и результат.  В этом смысле на 100% это удалось моему хирургу. Я получила очень чуткие, добрые и профессиональные советы и потрясающую грудочку!!"
-	},
-	{
-		name: "Вера",
-		service: "Интимная пластика",
-		intro: "Владислава Владиславовна - хирург с золотыми руками с ангельским личиком! Я так хочу Вас поблагодарить за результат моей операции! Очень жалко, что не сразу попала к Вам, а пришла переделывать",
-		text: "Для меня в работе очень важно две вещи: отношение и результат.  В этом смысле на 100% это удалось моему хирургу. Я получила очень чуткие, добрые и профессиональные советы и потрясающую грудочку!!"
-	},
-	{
-		name: "Лариса",
-		service: "Увеличение груди",
-		intro: "Для меня в работе очень важно две вещи: отношение и результат.  В этом смысле на 100% это удалось моему хирургу. Я получила очень чуткие, добрые и профессиональные советы и потрясающую грудочку!!",
-		text: "С самого начала мне очень понравился подход Владиславы Владиславовны, ее отношение к проблеме! После родов у меня образовался кожно жировой фартук, конечно я пробовала худеть, ходить на фитнес."
-	},
-	{
-		name: "Лариса",
-		service: "Увеличение груди",
-		intro: "Для меня в работе очень важно две вещи: отношение и результат.  В этом смысле на 100% это удалось моему хирургу. Я получила очень чуткие, добрые и профессиональные советы и потрясающую грудочку!!",
-		text: "Владислава Владиславовна - хирург с золотыми руками с ангельским личиком! Я так хочу Вас поблагодарить за результат моей операции! Очень жалко, что не сразу попала к Вам, а пришла переделывать"
-	},
-	{
-		name: "Светлана",
-		service: "Пластика живота",
-		intro: "С самого начала мне очень понравился подход Владиславы Владиславовны, ее отношение к проблеме! После родов у меня образовался кожно жировой фартук, конечно я пробовала худеть, ходить на фитнес,",
-		text: "Для меня в работе очень важно две вещи: отношение и результат.  В этом смысле на 100% это удалось моему хирургу. Я получила очень чуткие, добрые и профессиональные советы и потрясающую грудочку!!"
-	},
-	{
-		name: "Вера",
-		service: "Интимная пластика",
-		intro: "Владислава Владиславовна - хирург с золотыми руками с ангельским личиком! Я так хочу Вас поблагодарить за результат моей операции! Очень жалко, что не сразу попала к Вам, а пришла переделывать",
-		text: "Для меня в работе очень важно две вещи: отношение и результат.  В этом смысле на 100% это удалось моему хирургу. Я получила очень чуткие, добрые и профессиональные советы и потрясающую грудочку!!"
-	},
-	{
-		name: "Лариса",
-		service: "Увеличение груди",
-		intro: "Для меня в работе очень важно две вещи: отношение и результат.  В этом смысле на 100% это удалось моему хирургу. Я получила очень чуткие, добрые и профессиональные советы и потрясающую грудочку!!",
-		text: "С самого начала мне очень понравился подход Владиславы Владиславовны, ее отношение к проблеме! После родов у меня образовался кожно жировой фартук, конечно я пробовала худеть, ходить на фитнес."
-	}
-] %}
+					<picture>
 
-{% for item in list %}
+						<source srcset="/img/main/readme/left.webp 1x, /img/main/readme/left@2x.webp 2x" type="image/webp">
+						<source srcset="/img/main/readme/left.jpg 1x, /img/main/readme/left@2x.jpg 2x">
 
-					<li class="review-column__item readme{% if loop.index > 4 %} visuallyhidden{% endif %}">
+						<img src="/img/main/readme/left.jpg" alt="" loading="lazy" width="665" height="475">
 
-						<blockquote class="review__blockquote">
+					</picture>
 
-							<cite class="review__autor">
+					<div class="home-readme__text home-readme__text--1">
 
-								<span class="review__name">
-									{{ item.name }}
-								</span>
+						<h3 class="h3">
+							Ventilation
+						</h3>
 
-								<span class="review__service">
-									{{ item.service }} →
-								</span>
+						<p>
+							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						</p>
 
-							</cite>
+						<a href="/" class="btn">
+							Подробнее
+						</a>
+
+					</div>
+
+				</div>
+
+				<div class="home-readme__right">
+
+					<div class="home-readme__text home-readme__text--2">
+
+						<img class="home-readme__illustration" src="/img/main/readme/illustration.png" srcset="/img/main/readme/illustration@2x.png 2x" alt="" loading="lazy" width="378" height="277">
+
+						<h3 class="h3">
+							Refrigeration
+						</h3>
+
+						<p>
+							Excepteur sint occaecat cupidatat non deserunt mollit  id est laborum
+						</p>
+
+						<a href="/" class="btn">
+							Подробнее
+						</a>
+
+					</div>
+
+					<div class="home-readme__text home-readme__text--3">
+
+						<picture>
+
+							<source srcset="/img/main/readme/right.webp 1x, /img/main/readme/right@2x.webp 2x" type="image/webp">
+							<source srcset="/img/main/readme/right.jpg 1x, /img/main/readme/right@2x.jpg 2x">
+
+							<img src="/img/main/readme/right.jpg" alt="" loading="lazy" width="685" height="239">
+
+						</picture>
+
+						<div class="home-readme__text-inner home-readme__shadow">
+
+							<h3 class="h3">
+								Cooking
+							</h3>
 
 							<p>
-
-								{{ item.intro }}
-
-								<button class="readme__open button">
-									Развернуть
-								</button>
-
+								Excepteur sint occaecat cupidatat non deserunt mollit  id est laborum
 							</p>
 
-							<p class="readme__body visuallyhidden">
+							<a href="/" class="btn">
+								Подробнее
+							</a>
 
-								{{ item.text }}
+						</div>
 
-								<button class="readme__close button visuallyhidden">
-									Свернуть
-								</button>
+					</div>
 
-							</p>
+					<div class="home-readme__text home-readme__text--4 home-readme__shadow">
 
-						</blockquote>
+						<h3 class="h3">
+							Dishwasher
+						</h3>
 
-					</li>
+						<p>
+							Excepteur sint occaecat cupidatat non deserunt mollit  id est laborum
+						</p>
 
-{% endfor %}
+						<a href="/" class="btn">
+							Подробнее
+						</a>
 
-				</ul>
+					</div>
 
-			</div>
-
-			<div class="review__btn">
-
-				<button class="btn btn--outline review__show-all" type="button">
-					Еще отзывы
-				</button>
+				</div>
 
 			</div>
 
 		</div>
 
-	</section>
+	</div>
