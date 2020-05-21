@@ -76,6 +76,24 @@
 
 	}
 
+	&--black {
+
+		color: #fff;
+		background-color: var(--color);
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: var(--color);
+				background-color: #fff;
+
+			}
+
+		}
+
+	}
+
 	&--white {
 
 		color: var(--color);
@@ -123,6 +141,29 @@
 
 				color: var(--color);
 				background-color: #fff;
+
+			}
+
+		}
+
+	}
+
+	&--readme {
+
+		width: 130px;
+		height: 44px;
+		padding: 0;
+		background-color: #fff;
+		border: 1px solid #dfdfdf;
+		color: var(--color);
+		font: 15px/42px 'Roboto Slab';
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: var(--color);
+				background-color: #dfdfdf;
 
 			}
 

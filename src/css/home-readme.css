@@ -8,18 +8,6 @@
 
 	}
 
-	.btn {
-
-		width: 130px;
-		height: 44px;
-		padding: 0;
-		background-color: #fff;
-		border: 1px solid #dfdfdf;
-		color: #000;
-		font: 15px/42px 'Roboto Slab';
-
-	}
-
 	&__left {
 
 		position: relative;
