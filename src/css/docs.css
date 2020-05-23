@@ -14,7 +14,7 @@
 	&__item {
 
 		margin: 24px;
-		width: 617px;
+		width: calc(50% - 48px);
 		box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
 
 	}

@@ -2,7 +2,8 @@
 
 	.center {
 
-		padding: 60px 0;
+		padding-top: 60px;
+		padding-bottom: 60px;
 		color: #fff;
 		background-color: var(--black);
 		background-position: top right;

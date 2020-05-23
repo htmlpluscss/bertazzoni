@@ -30,6 +30,12 @@
 
 		width: 376px;
 
+		@media ($lgWidth) {
+
+			width: 320px;
+
+		}
+
 	}
 
 	&__left {
@@ -43,6 +49,12 @@
 		width: 320px;
 		font-size: 15px;
 		line-height: 30px;
+
+		@media ($lgWidth) {
+
+			width: 280px;
+
+		}
 
 		a {
 
@@ -64,6 +76,20 @@
 
 			width: 334px;
 			padding-left: 36px;
+
+			@media ($lgWidth) {
+
+				width: 280px;
+				padding-left: 0;
+
+				p {
+
+					padding-left: 0;
+					line-height: 30px;
+
+				}
+
+			}
 
 			p {
 

@@ -27,15 +27,15 @@
 
 		display: flex;
 		flex-wrap: wrap;
-		margin: -11px;
+		margin: -10px;
 
 	}
 
 	&__item {
 
-		margin: 11px;
+		margin: 10px;
 		display: flex;
-		width: calc(100% / 3 - 22px);
+		width: calc(100% / 3 - 20px);
 
 	}
 
@@ -47,6 +47,12 @@
 		position: relative;
 		padding: 30px 26px;
 		transition: var(--transitionDefault);
+
+		@media ($lgWidth) {
+
+			padding: 20px;
+
+		}
 
 		&:hover {
 
@@ -104,6 +110,7 @@
 			object-fit: contain;
 			display: block;
 			margin: 0 auto;
+			max-width: 100%;
 
 		}
 
@@ -129,6 +136,13 @@
 		&__price {
 
 			font: 700 20px/26px 'Roboto Slab';
+			white-space: nowrap;
+
+			@media ($lgWidth) {
+
+				font-size: 18px;
+
+			}
 
 		}
 
@@ -137,10 +151,18 @@
 			color: #d6d6d6;
 			font: 15px/20px 'Roboto Slab';
 			position: relative;
+			white-space: nowrap;
+
+			@media ($lgWidth) {
+
+				font-size: 12px;
+
+			}
 
 			&.is-available {
 
 				color: var(--green);
+				font-size: 14px;
 
 				&::before {
 
@@ -228,6 +250,12 @@
 			visibility: hidden;
 			opacity: 0;
 			transition: var(--transitionDefault);
+
+			@media ($lgWidth) {
+
+				margin-top: -22px;
+
+			}
 
 		}
 

@@ -7,20 +7,26 @@
 
 		height: 875px;
 		height: 100vh;
+		z-index: 2;
 
 	}
 
-	&::after {
+	&__item {
 
-		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		content: '';
-		height: 441px;
-		background: linear-gradient(to top, #000, rgba(196, 196, 196, 0));
-		opacity: 0.5;
-		pointer-events: none;
+		&::after {
+
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			height: 441px;
+			background: linear-gradient(to top, #000, rgba(196, 196, 196, 0));
+			opacity: 0.5;
+			z-index: 1;
+			pointer-events: none;
+
+		}
 
 	}
 

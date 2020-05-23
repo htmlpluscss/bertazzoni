@@ -84,6 +84,18 @@
 		left: 124px;
 		right: -45px;
 
+		@media ($lgWidth) {
+
+			right: -30px;
+
+		}
+
+		@media ($mdWidth) {
+
+			right: -20px;
+
+		}
+
 	}
 
 	.swiper-controls {

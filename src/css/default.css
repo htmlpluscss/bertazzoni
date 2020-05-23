@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-/* color: red !important; */
+
 }
 
 html {
@@ -30,13 +30,24 @@ body {
 	overflow-y: scroll;
 	position: relative;
 
-/* background-image: url(/css/home.png); */
-background-position: center 39px;
-
 	/* IE10+ CSS styles go here */
 	@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
 
 		min-height: 100vh;
+
+	}
+
+	&::after {
+
+		position: absolute;
+		top: 0;
+		left: 20px;
+		right: 20px;
+		bottom: 0;
+		content: '';
+		outline:1px solid red;
+		z-index: 999;
+		pointer-events: none;
 
 	}
 

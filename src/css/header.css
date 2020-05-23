@@ -48,6 +48,7 @@
 		font-size: 28px;
 		line-height: 30px;
 		color: #fff;
+		white-space: nowrap;
 
 		span {
 
@@ -208,6 +209,12 @@
 		opacity: 1;
 		padding-left: 25px;
 		padding-right: 55px;
+
+		@media ($lgWidth) {
+
+			width: 300px;
+
+		}
 
 	}
 
