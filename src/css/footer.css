@@ -1,9 +1,15 @@
 .footer {
 
 	flex-shrink: 0;
-	 background-color: var(--black);
+	background-color: var(--black);
 	color: #fff;
 	padding: 30px 0 60px;
+
+	@media ($mdWidth) {
+
+		padding: 30px 0;
+
+	}
 
 	&__logo {
 
@@ -24,6 +30,12 @@
 		display: flex;
 		justify-content: space-between;
 
+		@media ($mdWidth) {
+
+			display: block;
+
+		}
+
 	}
 
 	&__right {
@@ -33,6 +45,12 @@
 		@media ($lgWidth) {
 
 			width: 320px;
+
+		}
+
+		@media ($mdWidth) {
+
+			margin: 40px auto;
 
 		}
 

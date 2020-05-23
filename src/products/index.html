@@ -27,13 +27,21 @@
 
 			<div class="products__flex">
 
-				<div class="products__left">
+				<div class="products__left filter-show__visible">
 
 {% include "products/filter.html" %}
 
 				</div>
 
-				<div class="products__right">
+				<div class="products__right filter-show__hidden">
+
+					<div class="products__filter-btn">
+
+						<button type="button" class="filter__btn-show btn btn--gray">
+							Показать фильтр
+						</button>
+
+					</div>
 
 {% include "products/sort.html" %}
 {% include "products/list.html" %}

@@ -8,6 +8,12 @@
 
 		display: flex;
 
+		@media ($mdWidth) {
+
+			display: block;
+
+		}
+
 	}
 
 	&__left {
@@ -15,12 +21,25 @@
 		position: relative;
 		width: 665px;
 
+		@media ($mdWidth) {
+
+			width: 100%;
+
+		}
+
 	}
 
 	&__right {
 
 		width: 685px;
 		position: relative;
+
+		@media ($mdWidth) {
+
+			width: 100%;
+			margin-top: 60px;
+
+		}
 
 	}
 
@@ -41,6 +60,16 @@
 
 			padding: 30px 30px 15px 0;
 
+			@media ($mdWidth) {
+
+				margin-top: -200px;
+				background-color: #fff;
+				box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+				padding: 30px;
+				margin-left: 100px;
+
+			}
+
 		}
 
 		&--2 {
@@ -51,6 +80,14 @@
 
 		&--3 {
 
+			@media ($mdWidth) {
+
+				display: flex;
+				flex-direction: column-reverse;
+				margin-top: 30px;
+
+			}
+
 			img {
 
 				position: absolute;
@@ -59,6 +96,14 @@
 				top: 0;
 				right: 0;
 				object-fit: cover;
+
+				@media ($mdWidth) {
+
+					position: relative;
+					height: 200px;
+					width: 100%;
+
+				}
 
 			}
 
@@ -77,6 +122,13 @@
 			left: -425px;
 			padding: 30px 40px 36px;
 			background-color: #fff;
+
+			@media ($mdWidth) {
+
+				left: 0;
+				width: 100%;
+
+			}
 
 		}
 

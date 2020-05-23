@@ -8,6 +8,24 @@
 
 	}
 
+	let windowScroll = window.pageYOffset;
+
+// show filter for mobile
+	document.querySelector('.filter__btn-show').addEventListener('click', () => {
+
+		windowScroll = window.pageYOffset;
+		document.body.classList.add('filter-show');
+
+	});
+
+// hide filter for mobile
+	document.querySelector('.filter__btn-show-result').addEventListener('click', () => {
+
+		document.body.classList.remove('filter-show');
+		window.scrollTo(0, windowScroll);
+
+	});
+
 // form reset
 	filter.addEventListener('reset', () => PubSub.publish('filterFormReset'));
 

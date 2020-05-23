@@ -1,5 +1,6 @@
 .accompanying {
 
+	color: #fff;
 	padding: 54px 0 66px;
 	background-color: var(--color);
 
@@ -12,16 +13,23 @@
 	&__list {
 
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
-		margin: 56px -10px 0;
+		margin: 46px -10px -10px;
 
 	}
 
 	&__item {
 
-		margin: 0 10px;
+		margin: 10px;
 		display: flex;
 		width: calc(100% / 4 - 20px);
+
+		@media ($mdWidth) {
+
+			width: calc(100% / 2 - 20px);
+
+		}
 
 	}
 

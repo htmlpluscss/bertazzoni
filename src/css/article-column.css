@@ -4,6 +4,12 @@
 	justify-content: space-between;
 	padding-bottom: 20px;
 
+	@media ($mdWidth) {
+
+		display: block;
+
+	}
+
 	&__box {
 
 		width: calc(50% - 34px);
@@ -11,11 +17,25 @@
 		line-height: 30px;
 		color: var(--text);
 
+		@media ($mdWidth) {
+
+			width: 100%;
+			font-size: 18px;
+			line-height: 26px;
+
+		}
+
 	}
 
 	&__item {
 
 		margin: 64px 0;
+
+		@media ($mdWidth) {
+
+			margin: 40px 0;
+
+		}
 
 	}
 
@@ -34,12 +54,26 @@
 		max-width: 100%;
 		object-fit: cover;
 
+		@media ($mdWidth) {
+
+			max-height: 30vw;
+			width: 100%;
+			margin-bottom: 20px;
+
+		}
+
 	}
 
 	figcaption {
 
 		max-width: 626px;
 		margin-bottom: 26px;
+
+		@media ($mdWidth) {
+
+			max-width: 100%;
+
+		}
 
 	}
 

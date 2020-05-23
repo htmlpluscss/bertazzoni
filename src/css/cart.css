@@ -1,11 +1,24 @@
-.cart  {
+.cart {
 
-	padding: 133px 0;
+	padding-bottom: 80px;
+
+	@media ($mdWidth) {
+
+		padding-top: 24px;
+
+	}
 
 	&__flex {
 
 		display: flex;
 		margin-top: 42px;
+
+		@media ($mdWidth) {
+
+			display: block;
+			margin-top: 24px;
+
+		}
 
 	}
 
@@ -14,6 +27,13 @@
 		width: 324px;
 		margin-right: 16px;
 		flex-shrink: 0;
+
+		@media ($mdWidth) {
+
+			width: auto;
+			margin: 0 0 20px;
+
+		}
 
 	}
 
@@ -28,6 +48,12 @@
 		font: 28px/42px 'Roboto Slab';
 		margin-bottom: 24px;
 		color: var(--text);
+
+		@media ($mdWidth) {
+
+			margin: 20px 0 0;
+
+		}
 
 		span {
 
@@ -219,16 +245,28 @@
 		position: sticky;
 		top: 100px;
 
+		@media ($mdWidth) {
+
+			display: flex;
+
+		}
+
 	}
 
 	&-shipping {
 
-		height: 142px;
 		position: relative;
-		padding: 26px 20px 0 123px;
+		padding: 26px 20px 26px 123px;
 		border: 1px solid #dfdfdf;
 		font: 20px/26px 'Roboto Slab';
 		margin-bottom: 24px;
+
+		@media ($mdWidth) {
+
+			padding: 120px 20px 26px 20px;
+			margin: 0 24px 0 0;
+
+		}
 
 		b {
 
@@ -300,6 +338,12 @@
 			border-collapse: separate;
 			border-spacing: 0 14px;
 
+			@media ($mdWidth) {
+
+				margin: 0;
+
+			}
+
 		}
 
 		thead {
@@ -369,6 +413,12 @@
 	&-order {
 
 		max-width: 555px;
+
+		@media ($mdWidth) {
+
+			max-width: 100%;
+
+		}
 
 		&__delivery {
 

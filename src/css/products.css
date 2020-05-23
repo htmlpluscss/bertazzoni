@@ -15,11 +15,33 @@
 		margin-right: 20px;
 		flex-shrink: 0;
 
+		@media ($mdWidth) {
+
+			display: none;
+			width: 100%;
+			margin: 0;
+
+		}
+
 	}
 
 	&__right {
 
 		flex-grow: 1;
+
+	}
+
+	&__filter-btn {
+
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+
+		@media ($desktop) {
+
+			display: none;
+
+		}
 
 	}
 
@@ -29,6 +51,13 @@
 		flex-wrap: wrap;
 		margin: -10px;
 
+		@media ($smWidth) {
+
+			display: block;
+			margin: 0;
+
+		}
+
 	}
 
 	&__item {
@@ -37,11 +66,25 @@
 		display: flex;
 		width: calc(100% / 3 - 20px);
 
+		@media ($mdWidth) {
+
+			width: calc(100% / 2 - 20px);
+
+		}
+
+		@media ($smWidth) {
+
+			width: 100%;
+			margin: 20px 0;
+
+		}
+
 	}
 
 	&-card {
 
 		height: 100%;
+		color: var(--color);
 		background-color: #fff;
 		border: 1px solid #e2e0e0;
 		position: relative;
@@ -256,6 +299,28 @@
 				margin-top: -22px;
 
 			}
+
+		}
+
+	}
+
+}
+
+@media ($mdWidth) {
+
+	.filter-show {
+
+		& &__visible {
+
+			display: block;
+
+		}
+
+		& &__hidden,
+		.related,
+		.footer {
+
+			display: none !important;
 
 		}
 

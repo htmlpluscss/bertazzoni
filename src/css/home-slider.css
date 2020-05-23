@@ -2,6 +2,13 @@
 
 	position: relative;
 	background-color: #0e1116;
+	margin-top: -116px;
+
+	@media ($mdWidth) {
+
+		margin-top: -80px;
+
+	}
 
 	.center {
 
@@ -63,11 +70,37 @@
 			letter-spacing: 2.5px;
 			text-transform: uppercase;
 
+			@media ($mdWidth) {
+
+				font-size: 22px;
+				line-height: 60px;
+				height: 60px;
+				padding: 0 30px;
+				letter-spacing: 2px;
+
+			}
+
+			@media ($smWidth) {
+
+				font-size: 20px;
+				line-height: 40px;
+				height: 40px;
+				padding: 0 20px;
+				letter-spacing: 1px;
+
+			}
+
 		}
 
 		.btn--readme {
 
 			margin-top: 56px;
+
+			@media ($smWidth) {
+
+				margin-top: 40px;
+
+			}
 
 		}
 
@@ -91,6 +124,21 @@
 			color: #fff;
 			font: 90px/130px Annabelle;
 			text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			text-align: center;
+
+			@media ($mdWidth) {
+
+				font-size: 50px;
+				line-height: 70px;
+
+			}
+
+			@media ($smWidth) {
+
+				font-size: 30px;
+				line-height: 40px;
+
+			}
 
 		}
 
@@ -100,6 +148,19 @@
 			font: 30px/40px Annabelle;
 			text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 			margin-top: 44px;
+
+			@media ($mdWidth) {
+
+				font-size: 26px;
+
+			}
+
+			@media ($smWidth) {
+
+				font-size: 20px;
+				line-height: 30px;
+
+			}
 
 		}
 

@@ -1,8 +1,8 @@
 .breadcrumbs {
 
-	padding: 116px 0 35px;
+	padding: 0 0 35px;
 
-	@media ($smWidth) {
+	@media ($mdWidth) {
 
 		display: none;
 

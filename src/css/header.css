@@ -5,7 +5,6 @@
 	left: 0;
 	right: 0;
 	z-index: 9;
-	padding: 22px 0;
 	background-color: color(#0b0b0b a(50%));
 
 	.center {
@@ -29,6 +28,7 @@
 
 	&__flex {
 
+		height: 80px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;

@@ -7,6 +7,12 @@
 	justify-content: center;
 	padding: 25px;
 
+	@media ($mdWidth) {
+
+		padding: 20px;
+
+	}
+
 	&__item {
 
 		width: 240px;
@@ -20,6 +26,12 @@
 		line-height: 65px;
 		height: 65px;
 		padding: 0;
+
+		@media ($mdWidth) {
+
+			font-size: 16px;
+
+		}
 
 	}
 

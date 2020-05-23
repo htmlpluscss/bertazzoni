@@ -2,6 +2,12 @@
 
 	display: flex;
 
+	@media ($mdWidth) {
+
+		justify-content: center;
+
+	}
+
 	&__item {
 
 		display: flex;
