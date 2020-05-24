@@ -2,9 +2,21 @@
 
 	padding-top: 40px;
 
+	@media ($smWidth) {
+
+		padding-top: 20px;
+
+	}
+
 	.center {
 
 		padding-bottom: 94px;
+
+		@media ($smWidth) {
+
+			padding-bottom: 60px;
+
+		}
 
 		&::before {
 
@@ -19,6 +31,12 @@
 			@media ($mdWidth) {
 
 				top: 60px;
+
+			}
+
+			@media ($smWidth) {
+
+				top: 50px;
 
 			}
 
@@ -56,7 +74,6 @@
 		.h1 {
 
 			text-align: left;
-			line-height: 50px;
 
 		}
 
@@ -66,6 +83,14 @@
 			line-height: 30px;
 			color: var(--text);
 			margin: 26px 0 34px;
+
+			@media ($smWidth) {
+
+				margin: 20px 0;
+				font-size: 16px;
+				line-height: 24px;
+
+			}
 
 		}
 
@@ -95,6 +120,13 @@
 		padding-left: 50px;
 		position: relative;
 
+		@media ($smWidth) {
+
+			padding: 0;
+			box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+
+		}
+
 	}
 
 	.swiper-container {
@@ -113,6 +145,15 @@
 		@media ($mdWidth) {
 
 			right: -20px;
+
+		}
+
+		@media ($smWidth) {
+
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
 
 		}
 
@@ -150,11 +191,40 @@
 
 		}
 
+		@media ($smWidth) {
+
+			top: auto;
+			left: 0;
+			right: 0;
+			bottom: -36px;
+
+			.button {
+
+				background-color: #000;
+
+			}
+
+		}
+
 	}
 
 	&__item {
 
 		width: 380px !important;
+
+		@media ($smWidth) {
+
+			width: 100% !important;
+
+			img {
+
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+
+			}
+
+		}
 
 	}
 
@@ -170,6 +240,13 @@
 
 			font: 25px/33px 'Roboto Slab';
 
+			@media ($smWidth) {
+
+				font-size: 20px;
+				line-height: 24px;
+
+			}
+
 		}
 
 		&-text {
@@ -178,6 +255,21 @@
 			line-height: 27px;
 			margin-top: 7px;
 			color: var(--text);
+
+			@media ($smWidth) {
+
+				font-size: 16px;
+				line-height: 22px;
+
+			}
+
+		}
+
+		@media ($smWidth) {
+
+			width: 100%;
+			padding: 20px;
+			box-shadow: none;
 
 		}
 

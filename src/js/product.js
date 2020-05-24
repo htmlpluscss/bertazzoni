@@ -16,7 +16,7 @@
 	Array.prototype.forEach.call(elems, (el, index) =>
 		el.addEventListener('click', () =>
 			Array.prototype.forEach.call(big, (e, i) =>
-				e.classList.toggle('visuallyhidden', i !== index))));
+				e.classList.toggle('is-active', i === index))));
 
 })(document.querySelectorAll('.product__images-small-item'));
 

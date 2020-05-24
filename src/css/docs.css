@@ -8,6 +8,12 @@
 
 	}
 
+	@media ($smWidth) {
+
+		margin-top: 20px;
+
+	}
+
 	&__list {
 
 		display: flex;
@@ -58,6 +64,13 @@
 
 		}
 
+		@media ($smWidth) {
+
+			background-position: 20px center;
+			padding: 20px 20px 20px 90px;
+
+		}
+
 	}
 
 	&__name {
@@ -75,6 +88,13 @@
 
 		}
 
+		@media ($smWidth) {
+
+			font-size: 16px;
+			line-height: 22px;
+
+		}
+
 	}
 
 	&__size {
@@ -83,6 +103,13 @@
 		line-height: 27px;
 		color: #9c9c9c;
 		display: block;
+
+		@media ($smWidth) {
+
+			font-size: 14px;
+			line-height: 24px;
+
+		}
 
 	}
 

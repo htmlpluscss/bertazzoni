@@ -12,6 +12,12 @@
 		width: 100%;
 		padding: 0 30px;
 
+		@media ($smWidth) {
+
+			padding: 0 20px;
+
+		}
+
 	}
 
 	@media ($lgWidth) {
@@ -33,12 +39,31 @@
 		align-items: center;
 		justify-content: space-between;
 
+		@media ($smWidth) {
+
+			height: 60px;
+
+		}
+
 	}
 
 	&__logo {
 
 		margin-right: auto;
 		margin-left: 28px;
+
+		@media ($smWidth) {
+
+			margin-left: 20px;
+
+			svg {
+
+				width: 118px;
+				height: 16px;
+
+			}
+
+		}
 
 	}
 
@@ -58,7 +83,7 @@
 
 	}
 
-	&__btn {
+	&__btn-callback {
 
 		height: 34px;
 		background-color: #252b36;
@@ -84,7 +109,7 @@
 
 	}
 
-	&__user {
+	&__favorite {
 
 		fill: #fff;
 		margin: 0 15px;
@@ -100,19 +125,14 @@
 
 		}
 
-	}
+		@media ($mdWidth) {
 
-	&__favorite {
+			margin: 0 20px 0 0;
 
-		fill: #fff;
-		margin: 0 15px;
-		position: relative;
+			svg {
 
-		@media ($desktop) {
-
-			&:hover {
-
-				fill: var(--yellow);
+				width: 30px;
+				height: 30px;
 
 			}
 
@@ -147,6 +167,13 @@
 			text-align: center;
 			font-size: 8px;
 
+			@media ($mdWidth) {
+
+				top: 16px;
+				left: 16px;
+
+			}
+
 		}
 
 		@media ($desktop) {
@@ -154,6 +181,19 @@
 			&:hover {
 
 				fill: var(--yellow);
+
+			}
+
+		}
+
+		@media ($mdWidth) {
+
+			margin: 0;
+
+			svg {
+
+				width: 30px;
+				height: 30px;
 
 			}
 

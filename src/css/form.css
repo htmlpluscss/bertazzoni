@@ -250,14 +250,14 @@
 
 	&--error {
 
-		border-color: color(var(--error) a(25%));
-		background-color: color(var(--error) a(25%)) !important;
+		border-color: var(--error) !important;
 
 	}
 
 	&:invalid {
 
 		box-shadow: none;
+		background-color: transparent;
 
 	}
 

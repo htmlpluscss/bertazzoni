@@ -1,4 +1,4 @@
-	<div class="product__images">
+	<div class="product__images swiper-container swiper-container--product">
 
 		<div class="product__images-small">
 
@@ -66,22 +66,9 @@
 
 		</div>
 
-		<div class="product__images-big">
+		<div class="product__images-big swiper-wrapper">
 
-			<div class="product__images-big-item">
-
-				<picture>
-
-					<source srcset="/img/product/img--620.webp 1x, /img/product/img--1240.webp 2x" type="image/webp">
-					<source srcset="/img/product/img--620.jpg 1x, /img/product/img--1240.jpg 2x">
-
-					<img src="/img/product/img--620.jpg" alt="{{ title }}" loading="lazy" width="620" height="688">
-
-				</picture>
-
-			</div>
-
-			<div class="product__images-big-item visuallyhidden">
+			<div class="product__images-big-item swiper-slide is-active">
 
 				<picture>
 
@@ -94,7 +81,7 @@
 
 			</div>
 
-			<div class="product__images-big-item visuallyhidden">
+			<div class="product__images-big-item swiper-slide">
 
 				<picture>
 
@@ -107,7 +94,20 @@
 
 			</div>
 
-			<div class="product__images-big-item visuallyhidden">
+			<div class="product__images-big-item swiper-slide">
+
+				<picture>
+
+					<source srcset="/img/product/img--620.webp 1x, /img/product/img--1240.webp 2x" type="image/webp">
+					<source srcset="/img/product/img--620.jpg 1x, /img/product/img--1240.jpg 2x">
+
+					<img src="/img/product/img--620.jpg" alt="{{ title }}" loading="lazy" width="620" height="688">
+
+				</picture>
+
+			</div>
+
+			<div class="product__images-big-item swiper-slide">
 
 				<picture>
 

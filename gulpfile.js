@@ -95,7 +95,9 @@ gulp.task('css', function () {
 			.pipe(plumber())
 			.pipe(sourcemaps.init())
 			.pipe(postcss([
-				precss(),
+				precss({
+					preserve: true
+				}),
 				mqpacker(),
 				browserReporter()
 			]))
@@ -220,8 +222,8 @@ gulp.task('ftp', function () {
 
 	const f = filter('**/*.html', {restore: true});
 
-//	return gulp.src('build/**/*.{css,html,js}', {since: gulp.lastRun('ftp')})
-	return gulp.src('build/**/*', {since: gulp.lastRun('ftp')})
+	return gulp.src('build/**/*.{css,html,js}', {since: gulp.lastRun('ftp')})
+//	return gulp.src('build/**/*', {since: gulp.lastRun('ftp')})
 		.pipe(debug({title: 'ftp:'}))
 		.pipe(f)
 		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))

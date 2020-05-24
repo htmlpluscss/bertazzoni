@@ -6,19 +6,27 @@
 				{{ relatedTitle | default('Рекомендуемые товары') }}
 			</h3>
 
-			<ul class="related__list">
+			<div class="swiper-container-wrap">
+
+				<div class="swiper-container swiper-container--related">
+
+					<ul class="related__list swiper-wrapper">
 
 {% for item in [1,2,3,4] %}
 
-				<li class="related__item">
+						<li class="related__item swiper-slide">
 
 {% include "products/card.html" %}
 
-				</li>
+						</li>
 
 {% endfor %}
 
-			</ul>
+					</ul>
+
+				</div>
+
+			</div>
 
 			<div class="related__all">
 

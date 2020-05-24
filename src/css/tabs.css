@@ -2,11 +2,25 @@
 
 	position: relative;
 
+	@media ($smWidth) {
+
+		margin: 0 -20px;
+
+	}
+
 	&__nav {
 
 		display: flex;
 		position: relative;
 		justify-content: center;
+
+		@media ($smWidth) {
+
+			justify-content: flex-start;
+			overflow-x: auto;
+			padding: 20px;
+
+		}
 
 	}
 
@@ -23,11 +37,21 @@
 		align-items: center;
 		justify-content: center;
 
-
 		@media ($mdWidth) {
 
 			font-size: 16px;
 			padding: 0 8px;
+
+		}
+
+		@media ($smWidth) {
+
+			white-space: nowrap;
+			width: auto;
+			height: 50px;
+			margin-left: 0;
+			margin-right: 20px;
+			padding: 0 20px;
 
 		}
 

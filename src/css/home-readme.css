@@ -4,6 +4,19 @@
 	position: relative;
 	overflow: hidden;
 
+	@media ($smWidth) {
+
+		padding: 0;
+		margin: 0;
+
+		.center {
+
+			padding: 0;
+
+		}
+
+	}
+
 	&__column {
 
 		display: flex;
@@ -27,6 +40,19 @@
 
 		}
 
+		@media ($smWidth) {
+
+			img {
+
+				width: 100%;
+				height: 200px;
+				display: block;
+				object-fit: cover;
+
+			}
+
+		}
+
 	}
 
 	&__right {
@@ -38,6 +64,12 @@
 
 			width: 100%;
 			margin-top: 60px;
+
+		}
+
+		@media ($smWidth) {
+
+			margin-top: 20px;
 
 		}
 
@@ -53,6 +85,13 @@
 			line-height: 30px;
 			color: var(--text);
 			margin: 10px 0 15px;
+
+			@media ($smWidth) {
+
+				font-size: 16px;
+				line-height: 24px;
+
+			}
 
 		}
 
@@ -70,11 +109,25 @@
 
 			}
 
+			@media ($smWidth) {
+
+				margin-top: -100px;
+				padding: 20px;
+				margin-left: 20px;
+
+			}
+
 		}
 
 		&--2 {
 
 			padding: 0 43px 30px;
+
+			@media ($smWidth) {
+
+				padding: 20px;
+
+			}
 
 		}
 
@@ -85,6 +138,13 @@
 				display: flex;
 				flex-direction: column-reverse;
 				margin-top: 30px;
+
+			}
+
+			@media ($smWidth) {
+
+				margin: 0;
+				padding: 0;
 
 			}
 
@@ -113,6 +173,12 @@
 
 			padding: 30px 43px 36px;
 
+			@media ($smWidth) {
+
+				padding: 20px;
+
+			}
+
 		}
 
 		&-inner {
@@ -127,6 +193,12 @@
 
 				left: 0;
 				width: 100%;
+
+			}
+
+			@media ($smWidth) {
+
+				padding: 20px;
 
 			}
 
@@ -145,6 +217,12 @@
 		top: 13px;
 		right: -45px;
 		position: absolute;
+
+		@media ($smWidth) {
+
+			right: 0;
+
+		}
 
 	}
 

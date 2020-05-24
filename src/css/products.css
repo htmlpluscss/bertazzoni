@@ -2,10 +2,22 @@
 
 	margin: 30px 0;
 
+	@media ($smWidth) {
+
+		margin: 20px 0;
+
+	}
+
 	&__flex {
 
 		display: flex;
 		margin-top: 26px;
+
+		@media ($smWidth) {
+
+			margin-top: 20px;
+
+		}
 
 	}
 
@@ -76,6 +88,7 @@
 
 			width: 100%;
 			margin: 20px 0;
+			justify-content: center;
 
 		}
 
@@ -247,6 +260,12 @@
 			line-height: 20px;
 			display: block;
 
+			@media ($mdWidth) {
+
+				display: none;
+
+			}
+
 			tbody {
 
 				display: block;
@@ -297,6 +316,21 @@
 			@media ($lgWidth) {
 
 				margin-top: -22px;
+
+			}
+
+			@media ($mdWidth) {
+
+				position: relative;
+				top: 0;
+				left: 0;
+				right: 0;
+				margin: 0;
+				border: 0;
+				padding: 20px 0 0;
+				pointer-events: auto;
+				visibility: visible;
+				opacity: 1;
 
 			}
 

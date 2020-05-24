@@ -1,11 +1,20 @@
 .home-technology {
 
+	position: relative;
+	z-index: 1;
+
 	.center {
 
 		color: #fff;
 		text-align: center;
 		padding-top: 45px;
 		padding-bottom: 88px;
+
+		@media ($smWidth) {
+
+			padding: 30px 20px;
+
+		}
 
 	}
 
@@ -49,6 +58,13 @@
 		display: flex;
 		justify-content: center;
 
+		@media ($smWidth) {
+
+			flex-wrap: wrap;
+			margin: 20px -10px 0;
+
+		}
+
 	}
 
 	&__item {
@@ -63,6 +79,13 @@
 
 		}
 
+		@media ($smWidth) {
+
+			width: 50%;
+			padding: 10px;
+
+		}
+
 	}
 
 	&__ico {
@@ -73,6 +96,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		@media ($smWidth) {
+
+			padding: 0;
+			height: 140px;
+
+		}
 
 	}
 

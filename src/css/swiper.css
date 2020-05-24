@@ -19,6 +19,12 @@
 
 	}
 
+	.swiper-container-wrap {
+
+		position: relative;
+
+	}
+
 	.swiper-controls {
 
 		position: absolute;
@@ -40,6 +46,8 @@
 
 		@media ($smWidth) {
 
+			top: auto;
+			bottom: 20px;
 
 		}
 
@@ -75,6 +83,7 @@
 		height: 100%;
 		z-index: 1;
 		display: flex;
+		flex-wrap: nowrap;
 		transition-property: transform;
 		transition-timing-function: ease;
 
@@ -140,6 +149,8 @@
 		pointer-events: none;
 
 		@media ($smWidth) {
+
+			display: none;
 
 		}
 
@@ -229,11 +240,11 @@
 
 		.button {
 
-			background-color: var(--text);
-			opacity: .2;
+			background-color: #fff;
+			opacity: .5;
 			height: 6px;
 			width: 6px;
-			transition: .3s;
+			transition: var(--transitionDefault);
 			margin: 5px;
 			border-radius: 3px;
 			pointer-events: auto;

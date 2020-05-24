@@ -10,10 +10,17 @@
 
 	}
 
+	@media ($smWidth) {
+
+		margin-top: -60px;
+
+	}
+
 	.center {
 
 		height: 875px;
 		height: 100vh;
+		height: var(--homeSliderHeight);
 		z-index: 2;
 
 	}
@@ -27,7 +34,7 @@
 			right: 0;
 			bottom: 0;
 			content: '';
-			height: 441px;
+			height: 50%;
 			background: linear-gradient(to top, #000, rgba(196, 196, 196, 0));
 			opacity: 0.5;
 			z-index: 1;
@@ -61,6 +68,14 @@
 		align-items: center;
 		justify-content: center;
 
+		@media ($smWidth) {
+
+			top: 200px;
+			left: 20px;
+			right: 20px;
+
+		}
+
 		.btn--black {
 
 			font-size: 25px;
@@ -83,10 +98,11 @@
 			@media ($smWidth) {
 
 				font-size: 20px;
-				line-height: 40px;
-				height: 40px;
-				padding: 0 20px;
+				line-height: 30px;
+				height: auto;
+				padding: 10px 20px;
 				letter-spacing: 1px;
+				white-space: normal;
 
 			}
 
@@ -119,6 +135,14 @@
 		align-items: center;
 		justify-content: center;
 
+		@media ($smWidth) {
+
+			top: 200px;
+			left: 20px;
+			right: 20px;
+
+		}
+
 		&-head {
 
 			color: #fff;
@@ -148,6 +172,7 @@
 			font: 30px/40px Annabelle;
 			text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 			margin-top: 44px;
+			text-align: center;
 
 			@media ($mdWidth) {
 

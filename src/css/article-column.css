@@ -7,6 +7,7 @@
 	@media ($mdWidth) {
 
 		display: block;
+		padding: 0;
 
 	}
 
@@ -25,6 +26,13 @@
 
 		}
 
+		@media ($smWidth) {
+
+			font-size: 16px;
+			line-height: 22px;
+
+		}
+
 	}
 
 	&__item {
@@ -34,6 +42,12 @@
 		@media ($mdWidth) {
 
 			margin: 40px 0;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 0 -20px;
 
 		}
 
@@ -56,9 +70,15 @@
 
 		@media ($mdWidth) {
 
-			max-height: 30vw;
+			max-height: 50vw;
 			width: 100%;
 			margin-bottom: 20px;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 0;
 
 		}
 
@@ -72,6 +92,12 @@
 		@media ($mdWidth) {
 
 			max-width: 100%;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 20px;
 
 		}
 

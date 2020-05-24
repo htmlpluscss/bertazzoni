@@ -37,6 +37,8 @@
 
 				});
 
+				setTimeout( () => PubSub.publish('windowWidthResize'), 100 );
+
 			});
 
 		});

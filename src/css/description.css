@@ -4,6 +4,12 @@
 	background-color: #ececec;
 	position: relative;
 
+	@media ($smWidth) {
+
+		padding: 20px 0;
+
+	}
+
 	&__anchor {
 
 		position: absolute;
@@ -15,6 +21,12 @@
 
 		margin: 30px 0;
 
+		@media ($smWidth) {
+
+			margin: 20px -20px 0;
+
+		}
+
 	}
 
 	&__item {
@@ -22,6 +34,12 @@
 		margin: 6px 0;
 		background-color: #999;
 		color: #fff;
+
+		@media ($smWidth) {
+
+			margin: 1px 0;
+
+		}
 
 	}
 
@@ -39,6 +57,16 @@
 		background-color: #fff;
 		transition: var(--transitionDefault);
 
+		@media ($smWidth) {
+
+			font-size: 16px;
+			line-height: 20px;
+			height: auto;
+			padding-top: 15px;
+			padding-bottom: 15px;
+
+		}
+
 		@media ($desktop) {
 
 			&:hover {
@@ -53,6 +81,7 @@
 
 			top: 0;
 			right: 0;
+			height: 100%;
 
 		}
 
@@ -63,6 +92,12 @@
 		max-height: 9999px;
 		padding: 22px 30px;
 
+		@media ($smWidth) {
+
+			padding: 20px;
+
+		}
+
 	}
 
 	&__body {
@@ -72,6 +107,12 @@
 		transition: var(--transitionDefault);
 		padding: 0 30px;
 
+		@media ($smWidth) {
+
+			padding: 0 20px;
+
+		}
+
 	}
 
 	table {
@@ -79,6 +120,13 @@
 		width: 100%;
 		font-size: 17px;
 		line-height: 23px;
+
+		@media ($smWidth) {
+
+			font-size: 14px;
+			line-height: 18px;
+
+		}
 
 		th {
 

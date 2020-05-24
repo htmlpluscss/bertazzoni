@@ -72,6 +72,14 @@
 
 		margin: 26px auto;
 
+		@media ($smWidth) {
+
+			width: 100%;
+			padding: 0;
+			margin: 20px 0 0;
+
+		}
+
 	}
 
 }

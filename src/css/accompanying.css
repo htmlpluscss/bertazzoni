@@ -4,9 +4,29 @@
 	padding: 54px 0 66px;
 	background-color: var(--color);
 
+	@media ($smWidth) {
+
+		padding: 20px 0;
+
+		.swiper-controls {
+
+			position: relative;
+			bottom: 0;
+			padding-top: 20px;
+
+		}
+
+	}
+
 	&__tabs {
 
 		margin-top: 38px;
+
+		@media ($smWidth) {
+
+			margin-top: 20px;
+
+		}
 
 	}
 
@@ -16,6 +36,13 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		margin: 46px -10px -10px;
+
+		@media ($smWidth) {
+
+			justify-content: flex-start;
+			margin: 0;
+
+		}
 
 	}
 
@@ -28,6 +55,16 @@
 		@media ($mdWidth) {
 
 			width: calc(100% / 2 - 20px);
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 0;
+			width: 100%;
+			padding: 0 20px;
+			justify-content: center;
+			flex-shrink: 0
 
 		}
 

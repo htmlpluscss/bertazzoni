@@ -8,6 +8,12 @@
 
 	}
 
+	@media ($smWidth) {
+
+		padding-top: 20px;
+
+	}
+
 	&__flex {
 
 		display: flex;
@@ -52,6 +58,19 @@
 		@media ($mdWidth) {
 
 			margin: 20px 0 0;
+
+		}
+
+		@media ($smWidth) {
+
+			font-size: 24px;
+			line-height: 30px;
+
+			span {
+
+				margin-left: 4px;
+
+			}
 
 		}
 
@@ -140,6 +159,13 @@
 
 			}
 
+			@media ($smWidth) {
+
+				padding: 0;
+				border: 0 !important;
+
+			}
+
 		}
 
 		&-shipping {
@@ -154,6 +180,23 @@
 			font: 700 20px/26px 'Roboto Slab';
 			white-space: nowrap;
 
+			@media ($smWidth) {
+
+				font-size: 16px;
+
+			}
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 20px -20px;
+			padding: 20px;
+			display: flex !important;
+			flex-wrap: wrap;
+			border-top: 1px solid #e2e0e0;
+			border-bottom: 1px solid #e2e0e0;
+
 		}
 
 	}
@@ -165,6 +208,13 @@
 		@media ($lgWidth) {
 
 			display: block;
+
+		}
+
+		@media ($smWidth) {
+
+			display: flex;
+			margin-bottom: 20px;
 
 		}
 
@@ -181,6 +231,12 @@
 			@media ($lgWidth) {
 
 				padding: 20px 0 0;
+
+			}
+
+			@media ($smWidth) {
+
+				padding: 0 0 0 20px;
 
 			}
 
@@ -205,6 +261,13 @@
 
 			font: 18px/24px 'Roboto Slab';
 			margin-bottom: 10px;
+
+			@media ($smWidth) {
+
+				font-size: 16px;
+				line-height: 22px;
+
+			}
 
 		}
 
@@ -251,6 +314,12 @@
 
 		}
 
+		@media ($smWidth) {
+
+			display: block;
+
+		}
+
 	}
 
 	&-shipping {
@@ -265,6 +334,27 @@
 
 			padding: 120px 20px 26px 20px;
 			margin: 0 24px 0 0;
+
+		}
+
+		@media ($smWidth) {
+
+			display: block;
+			margin: 0 0 20px;
+			padding: 80px 20px 20px 20px;
+
+			b {
+
+				display: inline;
+
+			}
+
+			svg {
+
+				top: 20px;
+				left: 20px;
+
+			}
 
 		}
 
@@ -290,6 +380,19 @@
 		background-color: var(--yellow);
 		padding: 28px 15px 18px;
 
+		@media ($smWidth) {
+
+			padding: 20px;
+
+			.btn {
+
+				width: 100%;
+				padding: 0;
+
+			}
+
+		}
+
 		&__total {
 
 			display: flex;
@@ -304,6 +407,14 @@
 
 			}
 
+			@media ($smWidth) {
+
+				margin-bottom: 20px;
+				font-size: 18px;
+				line-height: 24px;
+
+			}
+
 		}
 
 		&__nds {
@@ -315,6 +426,13 @@
 			margin-bottom: 20px;
 			white-space: nowrap;
 
+			@media ($smWidth) {
+
+				font-size: 14px;
+				line-height: 20px;
+
+			}
+
 		}
 
 		&__note {
@@ -322,6 +440,14 @@
 			font-size: 15px;
 			line-height: 20px;
 			margin: 20px 4px;
+
+			@media ($smWidth) {
+
+				font-size: 13px;
+				line-height: 18px;
+				margin: 20px 0 0;
+
+			}
 
 		}
 
@@ -341,6 +467,36 @@
 			@media ($mdWidth) {
 
 				margin: 0;
+
+			}
+
+			@media ($smWidth) {
+
+				display: block;
+
+				tbody, tr {
+
+					display: block;
+
+				}
+
+				[data-label] {
+
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					margin-top: 5px;
+
+					&::before {
+
+						content: attr(data-label);
+						color: var(--color);
+						font-size: 16px;
+
+					}
+
+				}
 
 			}
 
@@ -402,6 +558,12 @@
 			padding: 0 !important;
 			text-align: center;
 
+			@media ($smWidth) {
+
+				padding-right: 20px !important;
+
+			}
+
 		}
 
 	}
@@ -429,37 +591,18 @@
 
 				margin-left: 90px;
 
-			}
+				@media ($smWidth) {
 
-		}
-
-		.h2 {
-
-			text-align: left;
-			margin: 46px 0 6px;
-
-		}
-
-		&__text {
-
-			font-size: 13px;
-			line-height: 18px;
-			margin-bottom: 44px;
-
-			a {
-
-				color: var(--brown);
-				transition: var(--transitionDefault);
-
-				@media ($desktop) {
-
-					&:hover {
-
-						color: var(--color);
-
-					}
+					margin: 20px 0;
 
 				}
+
+			}
+
+			@media ($smWidth) {
+
+				margin: 20px 0 40px;
+				display: block;
 
 			}
 
@@ -474,6 +617,12 @@
 				display: flex;
 				margin: 30px 0;
 
+				@media ($smWidth) {
+
+					display: block;
+
+				}
+
 			}
 
 			&-label {
@@ -483,6 +632,13 @@
 				color: var(--text);
 				padding-left: 25px;
 				width: 206px;
+
+				@media ($smWidth) {
+
+					width: auto;
+					padding: 10px 0;
+
+				}
 
 			}
 
@@ -543,8 +699,13 @@
 
 				font-size: 13px;
 
-			}
+				@media ($smWidth) {
 
+					line-height: 20px;
+
+				}
+
+			}
 
 		}
 

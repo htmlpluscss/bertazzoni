@@ -275,6 +275,12 @@
 
 			formOrderError.textContent = textError;
 
+			if(!BERTAZZONI.isInViewport(formOrder.querySelector('.input--error'))){
+
+				window.scrollTo(0, formOrder.querySelector('.input--error').getBoundingClientRect().top + window.pageYOffset - 100);
+
+			}
+
 		}
 
 	}

@@ -6,6 +6,36 @@
 	font-size: 20px;
 	margin-bottom: 18px;
 
+	@media ($smWidth) {
+
+		margin: 20px auto;
+		display: block;
+		font-size: 14px;
+		max-width: 464px;
+
+	}
+
+	&__left {
+
+		@media ($smWidth) {
+
+			text-align: center;
+			font-size: 16px;
+
+		}
+
+	}
+
+	&__label {
+
+		@media ($smWidth) {
+
+			display: none;
+
+		}
+
+	}
+
 	&__right {
 
 		display: flex;
@@ -17,6 +47,13 @@
 
 		margin-left: 25px;
 		min-width: 258px;
+
+		@media ($smWidth) {
+
+			margin: 10px 0 0;
+			min-width: 100%;
+
+		}
 
 	}
 

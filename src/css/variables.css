@@ -14,6 +14,8 @@
 
 	--transitionDefault: .3s;
 
+	--homeSliderHeight: 100vh;
+
 }
 
 $desktop: (min-width: 1200px);

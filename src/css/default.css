@@ -37,6 +37,12 @@ body {
 
 	}
 
+	&.bg-footer {
+
+		background-color: var(--black);
+
+	}
+
 }
 
 a {
@@ -181,6 +187,13 @@ table {
 
 	}
 
+	@media ($smWidth) {
+
+		font-size: 24px;
+		line-height: 1.4;
+
+	}
+
 }
 
 .h2 {
@@ -195,6 +208,13 @@ table {
 
 	}
 
+	@media ($smWidth) {
+
+		font-size: 20px;
+		line-height: 1.4;
+
+	}
+
 }
 
 .h3 {
@@ -204,6 +224,13 @@ table {
 	@media ($mdWidth) {
 
 		font-size: 24px;
+		line-height: 1.4;
+
+	}
+
+	@media ($smWidth) {
+
+		font-size: 20px;
 		line-height: 1.4;
 
 	}
@@ -232,6 +259,7 @@ nav {
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
+	background-color: #fff;
 
 }
 
@@ -244,6 +272,12 @@ nav {
 	@media ($mdWidth) {
 
 		padding-top: 80px;
+
+	}
+
+	@media ($smWidth) {
+
+		padding-top: 60px;
 
 	}
 

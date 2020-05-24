@@ -11,6 +11,16 @@
 
 	}
 
+	@media ($smWidth) {
+
+		.center {
+
+			width: 480px;
+
+		}
+
+	}
+
 	&__logo {
 
 		display: flex;
@@ -54,11 +64,24 @@
 
 		}
 
+		@media ($smWidth) {
+
+			width: 100%;
+			margin: 0;
+
+		}
+
 	}
 
 	&__left {
 
 		display: flex;
+
+		@media ($smWidth) {
+
+			display: block;
+
+		}
 
 	}
 
@@ -182,6 +205,12 @@
 	&__social {
 
 		margin: 40px 0;
+
+		@media ($smWidth) {
+
+			margin: 30px 0 0;
+
+		}
 
 	}
 

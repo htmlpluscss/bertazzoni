@@ -10,6 +10,12 @@
 		background-repeat: no-repeat;
 		background-image: url(/img/categories/bg.png);
 
+		@media ($smWidth) {
+
+			padding: 20px;
+
+		}
+
 	}
 
 	&__intro {
