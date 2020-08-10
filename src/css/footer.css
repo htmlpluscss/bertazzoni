@@ -116,26 +116,10 @@
 		&:first-child {
 
 			width: 334px;
-			padding-left: 36px;
 
 			@media ($lgWidth) {
 
 				width: 280px;
-				padding-left: 0;
-
-				p {
-
-					padding-left: 0;
-					line-height: 30px;
-
-				}
-
-			}
-
-			p {
-
-				padding-left: 36px;
-				line-height: 40px;
 
 			}
 
@@ -152,53 +136,11 @@
 
 	}
 
-	&__form {
+	&__about {
 
-		position: relative;
-		margin-top: 24px;
 
-		.input {
-
-			height: 63px;
-			background: #000;
-			border: 1px solid #FFF;
-			padding: 20px 19px;
-			font-family: Open Sans;
-			font-size: 20px;
-			line-height: 23px;
-			color: #ABABAB;
-
-			@media ($desktop) {
-
-				&:hover,
-				&:focus {
-
-					border-color: var(--yellow);
-
-				}
-
-			}
-
-		}
-
-		button {
-
-			position: absolute;
-			top: 0;
-			right: 0;
-			background-color: var(--yellow);
-
-			@media ($desktop) {
-
-				&:hover {
-
-					background-color: #fff;
-
-				}
-
-			}
-
-		}
+		font-size: 15px;
+		line-height: 30px;
 
 	}
 
