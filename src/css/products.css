@@ -204,7 +204,7 @@
 
 		&__availability {
 
-			color: #d6d6d6;
+			color: var(--brown);
 			font: 15px/20px 'Roboto Slab';
 			position: relative;
 			white-space: nowrap;

@@ -259,15 +259,10 @@
 		img {
 
 			max-width: 100%;
+			height: auto;
 			display: block;
 			object-fit: contain;
 			object-position: top;
-
-			@media ($mdWidth) {
-
-				height: auto;
-
-			}
 
 		}
 
@@ -335,6 +330,87 @@
 
 		}
 
+		&-table {
+
+			font-size: 20px;
+			line-height: 35px;
+			color: var(--text);
+			margin: 12px 0;
+
+			@media ($mdWidth) {
+
+				font-size: 16px;
+				line-height: 24px;
+
+				li {
+
+					padding-left: 24px;
+
+					&::before {
+
+						top: 8px;
+
+					}
+
+				}
+
+			}
+
+			@media ($smWidth) {
+
+				font-size: 14px;
+
+			}
+
+			table, tbody {
+
+				display: block;
+
+			}
+
+			tr {
+
+				display: flex;
+
+			}
+
+			th {
+
+				padding-left: 35px;
+				text-align: left;
+				font-weight: 400;
+				position: relative;
+				display: block;
+
+				&::before {
+
+					position: absolute;
+					width: 6px;
+					height: 6px;
+					top: 14px;
+					left: 0;
+					content: '';
+					border: 2px solid var(--text);
+
+				}
+
+			}
+
+			td {
+
+				display: block;
+
+				&::before {
+
+					content: '-';
+
+				}
+
+
+			}
+
+		}
+
 		&-link-all {
 
 			font-size: 20px;
@@ -353,7 +429,13 @@
 	&__color {
 
 		display: flex;
-		margin: 14px -6px;
+		margin: 24px -6px;
+
+		@media ($mdWidth) {
+
+			display: none;
+
+		}
 
 		img {
 
@@ -366,7 +448,7 @@
 
 	&__availability {
 
-		color: #d6d6d6;
+		color: var(--brown);
 		font: 19px/24px 'Roboto Slab';
 		position: relative;
 		padding-left: 20px;
