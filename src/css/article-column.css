@@ -1,28 +1,27 @@
 .article-column {
 
-	display: flex;
-	justify-content: space-between;
-	padding-bottom: 20px;
+	&__item {
 
-	@media ($mdWidth) {
-
-		display: block;
-		padding: 0;
-
-	}
-
-	&__box {
-
-		width: calc(50% - 34px);
+		margin: 64px 0;
 		font-size: 20px;
 		line-height: 30px;
 		color: var(--text);
+		display: flex;
+		justify-content: space-between;
+
+		&:nth-child(2n) {
+
+			flex-direction: row-reverse;
+
+		}
 
 		@media ($mdWidth) {
 
-			width: 100%;
+			margin: 40px 0;
 			font-size: 18px;
 			line-height: 26px;
+			flex-direction: column-reverse !important;
+
 
 		}
 
@@ -35,69 +34,50 @@
 
 	}
 
-	&__item {
+	&__media {
 
-		margin: 64px 0;
-
-		@media ($mdWidth) {
-
-			margin: 40px 0;
-
-		}
-
-		@media ($smWidth) {
-
-			margin: 0 -20px;
-
-		}
-
-	}
-
-	.h3 {
-
-		color: var(--color);
-		display: block;
-		margin-bottom: 16px;
-
-	}
-
-	img {
-
-		display: block;
-		margin-bottom: 26px;
-		max-width: 100%;
-		object-fit: cover;
+		width: 60%;
 
 		@media ($mdWidth) {
 
-			max-height: 50vw;
 			width: 100%;
-			margin-bottom: 20px;
 
 		}
 
-		@media ($smWidth) {
+		img,
+		video {
 
-			margin: 0;
+			width: 100%;
+			height: auto;
+			min-height: 100%;
+			object-fit: cover;
+
+			@media ($mdWidth) {
+
+				max-height: 50vw;
+				min-height: 30vw;
+
+			}
 
 		}
 
 	}
 
-	figcaption {
+	&__content {
 
-		max-width: 626px;
-		margin-bottom: 26px;
+		width: calc(40% - 64px);
 
 		@media ($mdWidth) {
 
-			max-width: 100%;
+			width: 100%;
 
 		}
 
-		@media ($smWidth) {
+		.h3 {
 
-			margin: 20px;
+			color: var(--color);
+			display: block;
+			margin: 16px 0;
 
 		}
 

@@ -23,6 +23,13 @@
 
 	}
 
+	&__item:last-child &__link {
+
+		background: none;
+		padding-right: 0;
+		margin-right: 0;
+	}
+
 	&__link {
 
 		color: #000;
