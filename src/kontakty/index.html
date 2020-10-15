@@ -1,0 +1,88 @@
+{% set title = "Контакты" %}
+
+{% set description = "" %}
+
+{% set breadcrumbs = [
+	{
+		name : title,
+		link : "kontakty"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="kontakty">
+
+		<div class="center">
+
+			<div class="kontakty__info">
+
+				<a href="/img/kontakty/sert.jpg" class="kontakty__img">
+
+					<img width="232" src="/img/kontakty/sert--210.jpg" srcset="/img/kontakty/sert--420.jpg 2x" alt="Сертификат дилера бытовой техники Bertazzoni">
+
+				</a>
+
+				<div class="kontakty__text">
+
+					<p>
+						Фирменный интернет-магазин Bertazzoni работает онлайн 24 часа в сутки. Вы можете разместить заказ на технику в любое удобное для вас время.
+					</p>
+
+					<p>
+						С 10-00 до 18-00 по будням, менеджеры интернет-магазина свяжутся с вами и подтвердят заказ.
+					</p>
+
+					<p>
+						Если по каким то причинам мы вам не позвонили, пожалуйста позвоните на телефон <a href="tel:+74952830323">+7 (495) 283-03-23</a> или напишите на электронную почту <a href="mailto:office@bertazzoni-rus.ru">office@bertazzoni-rus.ru</a>.
+					</p>
+
+				</div>
+
+			</div>
+
+			<h1 class="h1">
+				Реквизиты
+			</h1>
+
+			<dl class="key-value">
+
+				<div class="key-value__row">
+					<dt>Юридическое лицо:</dt>
+					<dd>ООО "ЛИОН"</dd>
+				</div>
+
+				<div class="key-value__row">
+					<dt>Юридический адрес:</dt>
+					<dd>111024, г. Москва, ул. 2-я Энтузиастов, д. 5, корп. 40, оф. 44</dd>
+				</div>
+
+				<div class="key-value__row">
+					<dt>ИНН / КПП:</dt>
+					<dd>7720489589 / 772001001</dd>
+				</div>
+
+				<div class="key-value__row">
+					<dt>ОГРН:</dt>
+					<dd>1197746729850</dd>
+				</div>
+
+				<div class="key-value__row">
+					<dt>Телефон:</dt>
+					<dd><a href="tel:+74952830323">+7 (495) 283-03-23</a></dd>
+				</div>
+
+				<div class="key-value__row">
+					<dt>e-mail:</dt>
+					<dd><a href="mailto:office@bertazzoni-rus.ru">office@bertazzoni-rus.ru</a></dd>
+				</div>
+
+			</dl>
+
+		</div>
+
+	</article>
+
+{% endblock %}

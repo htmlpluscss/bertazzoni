@@ -1,0 +1,79 @@
+.kontakty {
+
+	margin-bottom: 48px;
+
+	&__info {
+
+		display: flex;
+		padding: 24px;
+		background-color: #ececec;
+		display: flex;
+		align-items: flex-start;
+		margin-bottom: 36px;
+
+		@media ($smWidth) {
+
+			display: block;
+			margin: 0 -20px 20px;
+
+		}
+
+		p {
+
+			margin: 12px 0;
+
+		}
+
+	}
+
+	&__img {
+
+		margin-right: 24px;
+		flex-shrink: 0;
+
+		img {
+
+			padding: 10px;
+			display: block;
+			border: 1px solid var(--border);
+
+		}
+
+	}
+
+}
+
+.key-value {
+
+	&__row {
+
+		display: flex;
+		margin: 13px 0;
+		font-size: 15px;
+		line-height: 20px;
+
+		@media ($smWidth) {
+
+			display: block;
+
+		}
+
+	}
+
+	dt {
+
+		color: var(--text);
+
+	}
+
+	dd {
+
+		a {
+
+			color: var(--color);
+
+		}
+
+	}
+
+}
