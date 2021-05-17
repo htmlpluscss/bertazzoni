@@ -111,9 +111,19 @@
 
 	&__btn-show-result {
 
-		width: 100%;
-		margin-top: 6px;
-		padding: 0;
+		&::after {
+
+			content: attr(data-suf);
+
+		}
+
+		@media ($mdWidth) {
+
+			width: 100%;
+			margin-top: 6px;
+			padding: 0;
+
+		}
 
 		@media ($smWidth) {
 
@@ -123,7 +133,41 @@
 
 		@media ($desktop) {
 
-			display: none !important;
+			position: absolute;
+			top: 0;
+			left: 100%;
+			z-index: 3;
+			margin-left: 6px;
+			padding: 0 20px;
+			opacity: 0;
+			pointer-events: none;
+			transition: var(--transitionDefault);
+
+			&::before {
+
+				position: absolute;
+				top: 0;
+				left: 100%;
+				content: '';
+				transition: var(--transitionDefault);
+				border: 25px solid transparent;
+				border-left-color: var(--yellow);
+				border-right-width: 0;
+
+			}
+
+			&:hover::before {
+
+				border-left-color: var(--yellow-hover);
+
+			}
+
+			&.is-show {
+
+				opacity: 1;
+				pointer-events: auto;
+
+			}
 
 		}
 

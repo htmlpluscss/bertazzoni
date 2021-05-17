@@ -8,6 +8,37 @@
 
 	}
 
+// склонение
+	const declension = (num, expressions) => {
+
+		let r,
+			count = num % 100;
+
+		if (count > 4 && count < 21){
+
+			r = expressions['2'];
+
+		}
+		else {
+
+			count = count % 10;
+
+			if (count == 1){
+				r = expressions['0'];
+			}
+			else if (count > 1 && count < 5){
+				r = expressions['1'];
+			}
+			else{
+				r = expressions['2'];
+			}
+
+		}
+
+		return r;
+
+	}
+
 	let windowScroll = window.pageYOffset;
 
 // show filter for mobile
@@ -19,10 +50,28 @@
 	});
 
 // hide filter for mobile
-	document.querySelector('.filter__btn-show-result').addEventListener('click', () => {
+
+	const btnShowResult = filter.querySelector('.filter__btn-show-result'),
+		  expressions = btnShowResult.getAttribute('data-suf').split(',');
+
+	btnShowResult.addEventListener('click', () => {
+
+		if(BERTAZZONI.windowWidthOLd < 1200) {
+
+			window.scrollTo(0, windowScroll);
+
+		}
+		else {
+
+			if(BERTAZZONI.isInViewport(document.querySelector('.products'))){
+
+				document.querySelector('.products').scrollIntoView();
+
+			}
+
+		}
 
 		document.body.classList.remove('filter-show');
-		window.scrollTo(0, windowScroll);
 
 	});
 
@@ -30,8 +79,30 @@
 	filter.addEventListener('reset', () => PubSub.publish('filterFormReset'));
 
 // form change
-	filter.addEventListener('change', () => PubSub.publish('filterFormChange'));
+	filter.addEventListener('change', (e) => PubSub.publish('filterFormChange',e.target));
 
+// form submit
+/*	filter.addEventListener('submit', (e) => {
+
+		e.preventDefault();
+
+		filter.classList.add('is-loading');
+
+		fetch(filter.getAttribute('action'), {
+			method: 'POST',
+			body: new FormData(filter)
+		})
+		.then(response => response.json())
+		.then(result => {
+
+			console.log(result);
+
+			filter.classList.remove('is-loading');
+
+		});
+
+	});
+*/
 	// slider-range
 
 	var sliderRange = document.querySelectorAll('.slider-range');
@@ -42,7 +113,6 @@
 
 		var script = document.createElement('script');
 
-		script.type = 'text/javascript';
 		script.async = true;
 		script.src = '/js/nouislider.min.js';
 
@@ -108,7 +178,7 @@ BERTAZZONI.sliderRangeInit = (elems) => {
 
 		});
 
-		track.noUiSlider.on('end', () => PubSub.publish('filterFormChange'));
+		track.noUiSlider.on('end', () => PubSub.publish('filterFormChange', inputMin));
 
 	// события в инпутах
 
@@ -197,27 +267,50 @@ BERTAZZONI.sliderRangeInit = (elems) => {
 
 	var btnReset = filter.querySelector('.filter__btn-reset');
 
-	PubSub.subscribe('filterFormReset', () => btnReset.classList.add('hide'));
-	PubSub.subscribe('filterFormChange', () => btnReset.classList.remove('hide'));
+	PubSub.subscribe('filterFormReset', () => {
 
-// checked
+		btnReset.classList.add('hide');
+		btnShowResult.classList.remove('is-show');
 
-/*	var checkbox = document.querySelectorAll('.checkbox[required]');
+	});
 
-	Array.prototype.forEach.call(checkbox, function(el){
+	PubSub.subscribe('filterFormChange', (msg, target) => {
 
-		var input = el.querySelector('input');
+		btnReset.classList.remove('hide');
 
-		input.addEventListener('change', function() {
+		console.log(target.parentNode);
 
-			if(input.checked) {
+		fetch(filter.getAttribute('action'), {
+			method: 'POST',
+			body: new FormData(filter)
+		})
+		.then(response => response.json())
+		.then(result => {
 
-				el.classList.remove('checkbox--error');
+			console.log(result);
+
+			const count = parseInt(result.count);
+
+			if(isFinite(count)) {
+
+				var top = 0;
+
+				if(target.classList.contains('checkbox__input') || target.parentNode.classList.contains('slider-range__input-control')) {
+
+					top = target.parentNode.offsetTop;
+					top -= (btnShowResult.clientHeight - target.parentNode.clientHeight) / 2;
+
+				}
+
+				btnShowResult.querySelector('b').textContent = count;
+				btnShowResult.setAttribute('data-suf', declension(count, expressions));
+				btnShowResult.style.top = top + 'px';
+				btnShowResult.classList.add('is-show');
 
 			}
 
 		});
 
 	});
-*/
+
 })(document.querySelector('.filter'));

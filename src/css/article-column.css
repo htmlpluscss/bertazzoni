@@ -66,6 +66,7 @@
 	&__content {
 
 		width: calc(40% - 64px);
+		text-align: justify;
 
 		@media ($mdWidth) {
 
@@ -82,5 +83,11 @@
 		}
 
 	}
+
+}
+
+.text-align-justify {
+
+	text-align: justify;
 
 }

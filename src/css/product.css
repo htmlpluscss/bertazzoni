@@ -328,6 +328,29 @@
 
 			}
 
+			b {
+
+				color: var(--black);
+
+			}
+
+			a {
+
+				color: var(--color);
+				text-decoration: underline;
+
+				@media ($desktop) {
+
+					&:hover {
+
+						text-decoration: none;
+
+					}
+
+				}
+
+			}
+
 		}
 
 		&-table {
