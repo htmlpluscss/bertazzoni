@@ -52,6 +52,16 @@
 		margin-right: auto;
 		margin-left: 28px;
 
+		@media ($mdWidth) {
+
+			.header-search-open & {
+
+				display: none;
+
+			}
+
+		}
+
 		@media ($smWidth) {
 
 			margin-left: 20px;
@@ -73,7 +83,18 @@
 		font-size: 28px;
 		line-height: 30px;
 		color: #fff;
+		margin-right: 30px;
 		white-space: nowrap;
+
+		@media ($mdWidth) {
+
+			.header-search-open & {
+
+				display: none;
+
+			}
+
+		}
 
 		span {
 
@@ -127,6 +148,16 @@
 
 		@media ($mdWidth) {
 
+			.header-search-open & {
+
+				display: none;
+
+			}
+
+		}
+
+		@media ($smWidth) {
+
 			margin: 0 20px 0 0;
 
 			svg {
@@ -146,13 +177,28 @@
 		margin: 0 15px;
 		position: relative;
 
+		.header-search-open & {
+
+			@media ($mdWidth) {
+
+				flex-grow: 1;
+
+			}
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 0;
+
+		}
 	}
 
 	&__cart {
 
 		fill: #fff;
 		transition: var(--transitionDefault);
-		margin: 0 18px 0 42px;
+		margin: 0 15px;
 		position: relative;
 
 		&-count {
@@ -187,8 +233,6 @@
 		}
 
 		@media ($mdWidth) {
-
-			margin: 0;
 
 			svg {
 
@@ -237,16 +281,17 @@
 	height: 31px;
 	overflow: hidden;
 
-	&.is-open {
+	.header-search-open & {
 
 		overflow: visible;
 
 	}
 
-	&.is-open &__input {
+	.header-search-open &__input {
 
 		width: 370px;
 		opacity: 1;
+		left: 12px;
 		padding-left: 25px;
 		padding-right: 55px;
 
@@ -256,9 +301,15 @@
 
 		}
 
+		@media ($mdWidth) {
+
+			width: 100%;
+
+		}
+
 	}
 
-	&.is-open &__btn {
+	.header-search-open &__btn {
 
 		pointer-events: auto;
 		transition: 1s;
@@ -268,7 +319,6 @@
 	&__input {
 
 		top: -12px;
-		left: 12px;
 		width: 31px;
 		height: 55px;
 		background-color: #000;
@@ -277,6 +327,7 @@
 		padding-left: 0;
 		padding-right: 0;
 		color: #fff;
+		transition: none;
 
 		&::placeholder {
 
