@@ -245,20 +245,15 @@
 
 			xhr.onreadystatechange = () => {
 
-				if (xhr.readyState != 4){
+				if (xhr.readyState !== 4){
 
 					return;
 
 				}
 
-				if (xhr.status == 200) {
+				if (xhr.status === 200) {
 
-					console.log('редирект?');
-
-				} else {
-
-		//			alert('ошибка ' + xhr.status);
-					formOrderError.textContent = 'форма типа отправлена.';
+					location.reload();
 
 				}
 
